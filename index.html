@@ -19,6 +19,7 @@
 	<!-- <link href="css/bootstrap.css" rel="stylesheet"> -->
 	<link href='http://fonts.googleapis.com/css?family=Nixie+One|Unkempt|Muli|Julius+Sans+One|Amatic+SC|Handlee|Capriola' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Biryani|Roboto' rel='stylesheet' type='text/css'>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <style type="text/css">
 
     body{background: url('img/concrete_seamless/concrete.png') repeat center fixed;
@@ -27,9 +28,7 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     margin:0;
-    padding:0;
-
-	} /*initial no-repeat. repeat for moz*/
+    } /*initial no-repeat. repeat for moz*/
 
 	p{font-family: "adobe-garamond-pro","Adobe Garamond Pro","Georgia",serif; line-height: 1.333em; font-size: 150%;}
 
@@ -41,15 +40,19 @@
     sans-serif;
 	}
 
+
+	.des{margin-top:120px;}
 	.des img{transition: all 0.5s ease;}
 
 	.des img:hover{opacity:0.1; background:#414247; box-shadow:10px 10px 50px 20px black inset;}
 
 	a{text-decoration: none}
 
-	.row-dev{margin-bottom:100px; margin-top:70px;color:#3D0158} 
+	.row-dev{ margin-top:70px;color:#3D0158; letter-spacing: 1px} 
+	
+	.desc-header p{margin-top:35px;color:#3D0158; letter-spacing: 1px}
 
-	.navbar{margin:0;border:0; border-radius: 0;}
+	.navbar, header{margin:0;border:0; border-radius: 0;}
 	
 	.design{}
 
@@ -57,17 +60,36 @@
 
 	.design,.jumbotron{box-shadow:inset 0px 0px 0px 1px rgba(0,0,0,0.15), 0px 2px 3px 0px rgba(0,0,0,0.1)}
 
-	a{font-family: 'Muli', sans-serif;}
-	h1{letter-spacing: 1px;}
-	h1, h2, h3, h4{font-family: 'Roboto', sans-serif;font-weight:bold;}    
+	.nav a{font-family: 'Muli', sans-serif;}
+	
+	h1, h2, h3, h4{font-family: 'Roboto', sans-serif;font-weight:bold;}
+
+	.dev h1{width:267px; margin: 0 auto; border-top: 5px solid #4b4b4b; padding-top:10px; letter-spacing: 1px;}
+	.des h1{width:135px; margin: 0 auto; border-top: 5px solid #4b4b4b; padding-top:10px;letter-spacing: 1px;}
+	.modal{padding-left:0; margin-left: 0}    
+
+	
+	.meetup-git a i:hover{color:#d33036;}
+	.tumblr-git a i:hover{color:#d8247e;}
+
+	body {
+    padding-right: 0 !important;
+	}
+
 </style>
 
 <script type="text/javascript">
 	
+	
+			$(document).ready(function(){
+			    $(".nav li").click(function(){
+			        $("this").css("background-color","#E3E2E5");
+			    });
+			});
+
 </script>
 </head>
 <body>
-
 
 
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -89,316 +111,367 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li class="active"><a href="#">HOME <span class="sr-only">(current)</span></a></li>
-        <li><a style="color:white" href="#" data-toggle="modal" data-target="#myModal">CONTACT</a></li>
-        <li><a style="color:white" href="#" data-toggle="modal" data-target="#gdiModal">RESUME</a></li>
+        <li class="active"><a href="#">HOME </a></li>
+        <li class=""><a style="color:white" href="#" data-toggle="modal" data-target="#contactModal">CONTACT</a></li>
+        <!-- <li><a style="color:white" href="#" data-toggle="modal" data-target="#gdiModal">RESUME</a></li> -->
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
 
 <header>
-	<div class="jumbotron" style="background-color:#8B77C1; margin-top:0; opacity:0.5">
-		<div style="color:white; padding:100px 100px 120px 100px">
-		  <h1 style="opacity:1">This site is under construction...</h1> 
-		  <h3><i>This site is under construction...but meanwhile check out some of the projects I have worked on or are works in progress</i></h3> 
-		 </div>
-	</div>
+	<!-- <div class="container" style="max-width:100%; margin:0">
+		<div class="row"> -->
+			<div class="jumbotron" style="background-color:#8B77C1; margin-top:0; opacity:0.5">
+				<div style="color:white; padding:65px 35px 50px 35px;">
+				
+				<div style="text-align:center; margin:15px auto 10px ;width:200px; height:200px;">
+		        <img src="img/map.png" style="border-radius:50%;width:100%; height:100%; opacity:1;">
+		        </div>
+				  <h1 class="text-center"style="opacity:1; font-size:45px;">Anusuya Roy Choudhury</h1> 
+				  <h2 style="text-align:center; font-size:25px"> I design and develop front end technologies!</h2>
+				  <h3 style="font-size:20px"><i>Note* This site is still under construction...but meanwhile check out some of the projects I have worked on or are works in progress</i></h3> 
+				 </div>
+			</div>
+	<!-- 	</div>
+	</div> -->
 </header>
 
 <div class="container">
-	<div class="row" style="margin:20px;">
+	<div class="row" style="margin:50px;">
 
-<section class="dev">
-	<!-- Development -->
-	<div class="row"> <!--entire development section includes picture and content-->
-		<div class="row">
-			<div class="col-lg-12">
-		<h1 class="text-center">DEVELOPMENT</h1>
-		</div>
-		</div>
-		
-
-		<!--TUMBLR DEV section -->
-		<div class="row row-dev">
-			<div class="col-lg-8 text-center" style="float:right">
-				<img src="img/tumblr-theme2.png" class="img-thumbnail img-responsive">
-			</div>
-			<div class="col-lg-4 text-center" style="float:left">
-				<div class="content" style="margin-top:20px;">
-				<div class="row text-center" class="padding: 0 50px;">
-					<i class="fa fa-tumblr fa-2x" style="float:left; padding:0 20px 0 70px"></i>
-					<h3 style="float:left; margin-top:0px; border-bottom:3px solid #3D0158">Tumblr Theme</h3>
+		<section class="dev">
+			<!-- Development -->
+			<div class="row"> <!--entire development section includes picture and content-->
+				<div class="row">
+					<div class="col-lg-12">
+				<h1 class="text-center">DEVELOPMENT</h1>
+				</div>
 				</div>
 				
-				<p id="thisis" style="font-size:19px"> Tumblr theme development in progress. All colors, fonts, backgrounds customizable </br> Code so far <a href="https://github.com/arc6789/my-theme" style="text-decoration:none"target="_blank"><i class="fa fa-github-alt fa-1x"></i> </a> </br>Updates available soon...</br></br>
-					<b style="font-size:17px;" style="text-align:left">Roles: Design and Development</b></br></br>
-					<b style="font-size:17px;" class="text-left">Tools: Tumblr development platform</b></p>
-				</div> 
-			</div>
-		</div> <!-- END of Tumblr DEV section-->
-		
-		
-		<!--Maps for meetup section-->
-		<div class="row row-dev">
-			<div class="col-lg-8 text-center">
-				<img src="img/map.jpg" class="img-thumbnail img-responsive" style="margin-top:20px;">
-			</div>
-			<div class="col-lg-4 text-center">
-				<div class="content" style="margin-top:20px;">
-					<div class="row" class="padding: 0 50px">
-						<i class="fa fa-map-marker fa-2x" style="float:left; padding:0 20px 0 70px"></i> 
-						<h3 style="float:left; margin-top:0px; border-bottom:3px solid #3D0158">Maps for Meetup</h3>
-					</div>
-					<div class="row">
-						<p class="" style="font-size:19px"> This project maps the location of upcoming events for any particular Meetup group on a Mapbox map. Additionally also provides certain information like name, address, date and time of each event. The idea is to integrate this project into Girl Develop It - San Jose Chapter's website! </br> To learn more about this project and it's code you can checkout my github page.<a href="https://github.com/arc6789/GDI-Maps" style="text-decoration:none" target="_blank"> <i class="fa fa-github-alt fa-1x"></i> </a> </br></br> 
-						<b style="font-size:17px;" style="text-align:left">Roles: Design and Development</b></br></br>
-						<b style="font-size:17px;" class="text-left">Tools used: Meetup's RESTful Api, Mapbox.js, CartoCSS (to stylize map), Bootstrap framework, GeoJSON</b></p>
-						<!-- <img src="img/all-icons.png" class="img-thumbnail img-responsive"> -->
-					</div>
-				</div>
-			</div>
-		</div> <!--End of Maps for Meetup section-->
 
-
-		<!--HYBRID POINT UI section-->
-		<div class="row row-dev">
-			<div class="col-lg-8 text-center" style="float:right">
-				<img src="img/site.png" class="img-thumbnail img-responsive">
-				<div class="row" style="margin-top:25px;">
-					<div class="col-lg-6 text-center">
-						<img class="img-thumbnail img-responsive map-img" src="img/settings.png">
+				<!--TUMBLR DEV section -->
+				<div class="row row-dev">
+					<div class="col-lg-8 text-center" style="float:right">
+						<img src="img/tumblr-theme2.png" class="img-thumbnail img-responsive" style="margin-top:20px;">
 					</div>
-					<div class="col-lg-6 text-center">
-						<img class="img-thumbnail img-responsive map-img" src="img/maptools.png">
-						
+					<div class="col-lg-4 text-center" style="float:left">
+						<div class="content" style="margin-top:30px;">
+							<div class="row text-center" style=" width:217px; margin: 0 auto">
+								<i class="fa fa-tumblr-square fa-2x" style="float:left; padding:0"></i>
+								<h3 style="float:right; margin-top:0px;">Tumblr Theme</h3>
+							</div>
+							<div class="row" style="padding-top:20px; line-height:2">
+							<p id="thisis" class="tumblr-git" style="font-size:19px"> Tumblr theme development in progress. All colors, fonts, backgrounds customizable </br> Code so far <a href="https://github.com/arc6789/my-theme" style="text-decoration:none; color:#f25ea8"target="_blank"><i class="fa fa-github-alt fa-1x"></i> </a> </br>Updates available soon...</br></br>
+								<b style="font-size:17px;" style="text-align:left">Roles: Design and Development</b></br></br>
+								<b style="font-size:17px;" class="text-left">Tools: Tumblr development platform</b></p>
+							</div>
+						</div> 
 					</div>
-				</div>
+				</div> <!-- END of Tumblr DEV section-->
 				
-			</div>
-			
-
-			<div class="col-lg-4 text-center" style="float:left">
-				<div class="content" style="margin-top:20px;">
-
-					<div class="row" class="padding: 0 50px">
-						<i class="fa fa-location-arrow fa-2x" style="float:left; padding:0 20px 0 70px"></i>
-						<h3 style="float:left; margin-top:0px; border-bottom:3px solid #3D0158">Hybrid Point UI</h3>
+				
+				<!--Maps for meetup section-->
+				<div class="row row-dev">
+					<div class="col-lg-8 text-center">
+						<img src="img/map.jpg" class="img-thumbnail img-responsive" style="margin-top:20px;">
 					</div>
-					<p id="thisis" style="font-size:19px"> This UI was inspired by some of the projects I had worked on during a previous internship at a company that makes software for location and tracking. Hybrid Point Map is a web application that is a work in progress using Google Maps API. </br> To learn more about this project and it's code you can checkout my github page <a href="https://github.com/arc6789/Map-Proj" style="text-decoration:none" target="_blank"> <i class="fa fa-github-alt fa-1x"></i> </a> </br></br>
-						<b style="font-size:17px;" style="text-align:left">Roles: Design and Development</b></br></br>
-					<b style="font-size:17px;" class="text-left">Tools used: Google Maps API</b></p>
-					
-
-				</div>
-			</div>
-		</div> <!--END of HYBRID POINT UI section -->
-
-	</div> <!--entire devlopment section ends-->
-</section> <!--entire devlopment section ends-->
-
-
-
-<!---Design Section-->
-<section class="des">
-	<div class="row">
-		<!--DESIGN HEADER AREA!-->
-
-		<h1 class="text-center">DESIGN</h1>
-		<p>I also do alot of my own design work especially for all my personal projects. They range from designing mockups to creating graphic icons. I love the design process just as much as my development process and my go to tools are almost always Photoshop or Illustrator or sometimes, just a paper and pencil.</br></br></p>
-
-		<!--Column for GDI FLAT ICONS-->
-		<div class="col-lg-4 text-center design" style="padding:0; background-color:white">
-			<a href="#" data-toggle="modal" data-target="#flaticonsModal">
-			<div style="width:100%; height:100%; background-color:#f4eaf9">
-			
-			<img src="img/all-icons.png" style="padding:25px 20px" class="img-responsive text-center"><!--design img-thumbnail img-responsive-->
-			
-			</div>
-			</a>
-			<div class="img-caption" style="padding:5px; border-radius:0px">
-		  		<h4 class="text-center">Flat Icons</h4> 
-		 	 	<p style="font-size:17px; margin-top:17px;">Girl Develop It Icons</p> 
-			</div>
-			
-		</div> <!--END of GDI FLAT ICONS COLUMN-->
-
-		
-		
-
-
-		<!--HYBRID POINT LOGO COLUMN-->
-	  	<div class="col-lg-4 text-center">
-	  		<div style="padding:10px 60px">
-	  		<a href="#" data-toggle="modal" data-target="#hybridlogo">
-			<img src="img/Hybrid.png" style="width:100%; height:100%" class="img-responsive">
-			</a>
-			</div>
-			<div class="img-caption" style="margin-top:15px;height:150px; padding:5px; border-radius:0px">
-		  		<h4 class="text-center">Graphic Logo</h4> 
-		 	 	<p style="font-size:17px; margin-top:17px;">Logo Design for Hybrid Point Technology (fictional location tech company)</p> 
-			</div>
-		</div> <!--END of HYBRID POINT LOGO COLUMN-->
-
-		
-
-
-
-
-
-	  	<!--COLUMN for HYBRID POINT UI MODAL -->
-		<div class="col-lg-4 text-center" style="background-color:white;">
-			<a href="#" data-toggle="modal" data-target="#hybridpointModal">
-				<div style="background-color:white; width:100%; height:100%">
-					<img src="img/psap-crop.png" class="img-responsive" style="width:100%">
-				</div>
-			</a>
-
-			<div class="img-caption" style="margin-top:15px; padding:5px;">
-		  		<h4 class="text-center">UX/UI Design</h4> 
-		 	 	<p style="font-size:17px; margin-top:17px;">Mockup built using Adobe Photoshop/Illustrator</p> 
-			</div>
-		</div> <!--END of HYBRID POINT UI COLUMN-->
-
-		
-
-
-	  	
-
-
-
-		<!-- <div class="col-lg-4">
-			<img src="img/bg2.jpg" class=" design img-thumbnail img-responsive">
-			<div class="" style="margin-top:0;height:150px; padding:5px; border-radius:0px">
-		  		<h4 class="text-center">Napa</h4> 
-		 	 	<p style="font-size:17px; margin-top:17px;">Just a pictures I need to replace with something else. Copyrights my own.</p> 
-			</div>
-
-			background-color:#8B77C1; margin-top:0; opacity:0.5 
-		</div> -->
-	</div>
-	<!-- <div class="row" style="">
-		<div class="col-lg-12 text-center" style="width:200 px;margin:auto">
-			<img class="design img-responsive img-thumbnail"src="img/PSAP_UI_3-latesttt1.png">
-			<div class="" style="margin-top:0;height:150px; padding:5px;">
-		  		<h4 class="text-center">UX/UI Design.</h4> 
-		 	 	<p style="font-size:17px; margin-top:17px;"> Mockup built using Adobe Photoshop/Illustrator</p> 
-			</div>
-		</div>
-	</div> -->
-</section>
-
-		<!--GDI FLAT ICONS MODAL-->
-	  	<div class="modal fade" id="flaticonsModal" role="dialog">
-		    
-		    
-		      <!-- Modal content-->
-		      <div class="modal-content">
-
-			        <div class="modal-header text-center">
-			          <button type="button" class="close" data-dismiss="modal">&times;</button>
-			          <h1 class="modal-title">Girl Develop It Flat Icons</h1>
-			        </div>
-
-			        <div class="container">
-			        	<div class="row">
-			        		<div class="col-lg-8 col-lg-offset-2">
-			        			<div class="modal-body text-center">
-			          				<img src="img/all-icons.png" style="padding:50px" class="img-responsive">
-			        			</div>
-
-			    			</div>
+					<div class="col-lg-4 text-center">
+						<div class="content" style="margin-top:30px;">
+							<div class="row" style=" width:235px; margin: 0 auto">
+								<i class="fa fa-map-marker fa-2x" style="float:left; padding:0"></i> 
+								<h3 style="float:right; margin-top:0px;">Maps for Meetup</h3>
+							</div>
+							<div class="row" style="padding-top:20px; line-height:2">
+								<p class="meetup-git" style="font-size:19px;"> This project maps the location of upcoming events for any particular Meetup group on a Mapbox map. Additionally also provides certain information like name, address, date and time of each event. The idea is to integrate this project into Girl Develop It - San Jose Chapter's website </br> Code available on my github page.<a href="https://github.com/arc6789/GDI-Maps" style="text-decoration:none; color:#F95A61" target="_blank"> <i class="fa fa-github-alt fa-1x"></i> </a> </br></br> 
+								<b style="font-size:17px;" style="text-align:left">Roles: Design and Development</b></br></br>
+								<b style="font-size:17px;" class="text-left">Tools used: Meetup's RESTful Api, Mapbox.js, CartoCSS (to stylize map), Bootstrap framework, GeoJSON</b></p>
+								
+							</div>
 						</div>
-
-						<div class="row" style="padding:20px auto">
-			        		<div class="col-lg-8 col-lg-offset-2">
-			        			<h2 class="text-center">Flat Icon Design</h2>
-						           <p>Flat icons designed for Girl Develop it -San Jose Chapter website. The icon in the middle is the official Girl Develop it icon </p> <p><b> Tools: Adobe Illustrator/Photoshop</p> </b>
-
-			        		</div>
-		        		</div>
 					</div>
+				</div> <!--End of Maps for Meetup section-->
 
-			        <div class="modal-footer">
-			          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-			        </div>
 
-		      </div>
-		      
+				<!--HYBRID POINT UI section-->
+				<div class="row row-dev">
+					<div class="col-lg-8 text-center" style="float:right">
+						<img src="img/site.png" class="img-thumbnail img-responsive" style="margin-top:20px;">
+						<!---more images were here. pasted code to the bottom-->
+					</div>
+					<div class="col-lg-4 text-center" style="float:left">
+						<div class="content" style="margin-top:30px;">
+
+							<div class="row" style=" width:220px; margin: 0 auto">
+								<i class="fa fa-location-arrow fa-2x" style="float:left; padding:0"></i>
+								<h3 style="float:right; margin-top:0px;">Hybrid Point UI</h3>
+							</div>
+							<div class="row" style="padding-top:20px; line-height:2">
+								<p id="thisis" style="font-size:19px"> This UI was inspired by some of the projects I had worked on during a previous internship at a company that makes software for location and tracking. Hybrid Point Map is a web application that is a work in progress using Google Maps API. </br> To learn more about this project and it's code you can checkout my github page <a href="https://github.com/arc6789/Map-Proj" style="text-decoration:none" target="_blank"> <i class="fa fa-github-alt fa-1x"></i> </a> </br></br>
+									<b style="font-size:17px;" style="text-align:left">Roles: Design and Development</b></br></br>
+								<b style="font-size:17px;" class="text-left">Tools used: Google Maps API</b></p>
+							</div>
+
+						</div>
+					</div>
+				</div> <!--END of HYBRID POINT UI section -->
+
+			</div> <!--entire devlopment section ends-->
+		</section> <!--entire devlopment section ends-->
+
+
+
+		<!---Design Section-->
+		<section class="des">
+
+
+				<div class="row desc-header">
+					<!--DESIGN HEADER AREA!-->
+
+					<h1 class="text-center">DESIGN</h1>
+					<p>I usually do alot of my own design work especially for all my personal projects. They range from prototyping wireframes to designing mockups to creating graphic icons. I love the design process just as much as my development process. Usual go to tools are almost always Photoshop or Illustrator or sometimes just pencil and paper.</br></br></p>
+
+					<!--Column for GDI FLAT ICONS-->
+				</div>
+			
+				<div class="row">
+					<!-- <div style="width:800px; margin:0 auto"> -->
+					
+					<div class="col-md-3 text-center design" style=" background-color:white; padding:10px; margin:20px 50px 0 50px;">
+						<!-- <div class="inner" style="padding:20px"> -->
+							<a href="#" data-toggle="modal" data-target="#flaticonsModal">
+							<div style="width:100%; height:100%; background-color:#F5F5F5">
+							
+								<img src="img/all-icons.png" style="padding:15px" class="img-responsive"><!--design img-thumbnail img-responsive-->
+							
+							</div>
+							</a>
+							<div class="img-caption" style="padding:5px;">
+						  		<h4 class="text-center">Flat Icons</h4> 
+						 	 	<p style="font-size:17px; margin-top:17px;">Girl Develop It Icons</p> 
+							</div>
+
+						<!-- </div> -->
+						
+					</div> <!--END of GDI FLAT ICONS COLUMN-->
+
+					<!--HYBRID POINT LOGO COLUMN-->
+				  	<div class="col-md-3 text-center design" style=" background-color:white; padding:10px; margin: 20px 20px;">
+				  		<!-- <div class="inner" style="padding:20px"> -->
+					  		<a href="#" data-toggle="modal" data-target="#hybridlogo">
+				  			<div style="background-color:#F5F5F5;">
+								<img src="img/Hybrid.png" style="padding: 25px; text-align:center" class="img-responsive">
+							</div>
+							</a>
+						
+							<div class="img-caption" style="padding:5px;">
+						  		<h4 class="text-center">Hybrid Point Logo</h4> 
+						 	 	<p style="font-size:17px; margin-top:17px;">Graphic Logo Design</p> 
+							</div>
+						<!-- </div> -->
+					</div> <!--END of HYBRID POINT LOGO COLUMN-->
+
+				  	<!--COLUMN for HYBRID POINT UI MODAL -->
+					<div class="col-md-3 text-center design" style="background-color:white; padding:10px; margin:20px 50px 0 50px;">
+						<!-- <div class="inner" style="padding:20px"> -->
+							<a href="#" data-toggle="modal" data-target="#hybridpointModal">
+								<div style="background-color:white;">
+									<img src="img/psap-crop.png" class="img-responsive" style=" width:100%">
+								</div>
+							</a>
+
+							<div class="img-caption" style="padding:5px;">
+						  		<h4 class="text-center">Hybrid Point UI</h4> 
+						 	 	<p style="font-size:17px; margin-top:17px;">UX/UI Design Mockup <!-- built using Adobe Photoshop/Illustrator --></p> 
+							</div>
+						<!-- </div> -->
+					</div> <!--END of HYBRID POINT UI COLUMN-->
+
+				<!-- 	</div> -->
+			
+			</div>
+
+			  
+		</section>
+
+	<!--GDI FLAT ICONS MODAL-->
+	<div class="modal fade design-modal" id="flaticonsModal" role="dialog">
+
+
+	 <!-- Modal content-->
+	 	<div class="modal-content">
+
+	        <div class="modal-header text-center">
+	          <button type="button" class="close" data-dismiss="modal">&times;</button>
+	          <h1 class="modal-title">Flat Icons</h1>
+	        </div>
+
+	        <div class="container">
+	        	<div class="row">
+	        		<div class="col-lg-8 col-lg-offset-2">
+	        			<div class="modal-body text-center">
+	          				<img src="img/all-icons.png" style="padding:50px" class="img-responsive">
+	        			</div>
+
+	    			</div>
+				</div>
+
+				<div class="row desc" style="padding:40px auto">
+	        		<div class="col-lg-8 col-lg-offset-2">
+	        			<h3 class="text-center">Flat Icon Design</h3>
+				        <p>Flat icons designed for Girl Develop it -San Jose Chapter website. The icon in the middle is the official Girl Develop it icon </p> <p><b><i> Tools: Adobe Illustrator/Photoshop</i></b></p> 
+
+	        		</div>
+	    		</div>
+			</div>
+
+	        <div class="modal-footer">
+	          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        </div>
+
+	  	</div>
+	</div> <!--END OF GDI FLAT ICONS MODAL -->
+
 	
-	  	</div> <!--END OF GDI FLAT ICONS MODAL -->
 
 
-	  	<!-- HYBRID POINT LOGO MODAL -->
-	  	<div class="modal fade" id="hybridlogo" role="dialog">
-		 <!-- Modal content-->
-		      <div class="modal-content">
+	<!-- HYBRID POINT LOGO MODAL -->
+	<div class="modal fade design-modal" id="hybridlogo" role="dialog">
+	<!-- Modal content-->
+	  <div class="modal-content">
+	    <div class="modal-header">
+	      <button type="button" class="close" data-dismiss="modal">&times;</button>
+	      <h1 class="modal-title text-center">Hybrid Point Logo</h1>
+	    </div>
+
+	    <div class="container">
+	  		<div class="row">
+	  			<div class="col-lg-4 col-lg-offset-4">
+
+			        <div class="modal-body text-center" style="padding-top:50px">
+			          
+			           <img src="img/Hybrid.png" style="" class="img-responsive"> 
+			          
+
+			        </div>
+			    </div>
+
+	    	</div>
+	    	<div class="row desc" style="padding:40px auto">
+	    		<div class="col-lg-10 col-lg-offset-1" style="padding:20px">
+	    			<h3 class="text-center">Graphic Logo Design</h3>
+			        <p>Logo Design for Hybrid Point Technology, for hybrid location solutions. Design based on previous projects</p>
+			        <p><b><i> Tools: Adobe Illustrator/Photoshop</i></b></p> 
+
+	    		</div>
+	    	</div>
+	    </div>
+		<div class="modal-footer">
+	      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	    </div>
+
+
+	  </div>
+	</div> <!--END OF HYBRID POINT LOGO MODAL -->
+
+
+	<!-- HYBRID POINT UI MODAL -->
+	<div class="modal fade design-modal" id="hybridpointModal" role="dialog">
+
+	  <!-- Modal content-->
+	  <div class="modal-content">
+	      	
+	        <div class="container">
+	    	<div class="row">
+
+	        <div class="col-lg-12">   
 		        <div class="modal-header">
 		          <button type="button" class="close" data-dismiss="modal">&times;</button>
-		          <h1 class="modal-title text-center">LOGO DESIGN</h1>
+		          <h1 class="modal-title text-center">HYBRID POINT UI</h1>
 		        </div>
 
-		        <div class="container">
-		      		<div class="row">
-		      			<div class="col-lg-4 col-lg-offset-4">
+		        <div class="modal-body text-center">
+		        
+		          <img class="design img-responsive img-thumbnail" src="img/PSAP_UI_3-latesttt1.png">
 
-					        <div class="modal-body text-center" style="padding-top:50px">
-					          
-					           <img src="img/Hybrid.png" style="" class="img-responsive"> 
-
-					        </div>
-					    </div>
-
-		        	</div>
-		        	<div class="row" style="padding:20px auto">
-		        		<div class="col-lg-10 col-lg-offset-1">
-		        			<h3 class="text-center">Graphic Logo</h3>
-					           <p>I also do alot of my own design work especially for all my personal projects. They range from designing mockups to creating graphic icons.</p>
-		        		</div>
-		        	</div>
 		        </div>
-				<div class="modal-footer">
+
+				<div class="row desc" style="padding:40px auto">
+	        		<div class="col-lg-8 col-lg-offset-2">
+	        			<h3 class="text-center">UX/UI Design</h3>
+				        <p>This is a very similar mockup I designed for a geolocation software development company I interned at. All elements in this UI has been designed by me except for the Google Map. The implementation of this UI looked quite different due to the company's changes in requirements . </p> <p><b><i> Tools: Adobe Illustrator/Photoshop, GIMP</i></b></p> 
+
+	        		</div>
+	    		</div>
+
+		        <div class="modal-footer">
 		          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 		        </div>
 
+		        
+				
 
-		      </div>
-		</div> <!--END OF HYBRID POINT LOGO MODAL -->
+				
+
+	        </div>
+
+	      </div>
+	      </div>
+	  </div>
+	</div> <!--END OF HYBRID UI POINT MODAL -->
 
 
-		<!-- HYBRID POINT UI MODAL -->
-	  	<div class="modal fade" id="hybridpointModal" role="dialog">
-		    
-		      <!-- Modal content-->
-		      <div class="modal-content">
-			      	
-	                <div class="container">
-			    	<div class="row">
+	<style type="text/css">
+	.design-modal {color:#4b4b4b;}
+	.design-modal p{color:#787676}
+	
 
-	                <div class="col-lg-12">   
-			        <div class="modal-header">
-			          <button type="button" class="close" data-dismiss="modal">&times;</button>
-			          <h1 class="modal-title text-center">HYBRID POINT UI DESIGN</h1>
-			        </div>
+	</style>
 
+	<!-- Contact Modal -->
+	<div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-hidden="true">
+	  <div class="modal-dialog modal-md">
+	    <div class="modal-content" style="background-color:#414247;">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h3 class="modal-title text-center" id="myModalLabel" style="color:white">Contact Me</h3>
+	      </div>
+	      <div class="modal-body">
+	      	<div style="padding:15px 100px;color:#999999">
+		        <p> The best way to contact me is to email me at <a href="mailto:anusuyarc89@gmail.com">anusuyarc89@gmail.com</a></p>
+		        <p> But you can also reach me at my following sites:</p>
+	        </div>
+	        <div style="color:white; text-align:center">
+					<a href="https://www.linkedin.com/in/anusuyaroychoudhury" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a>
+					<a href="https://github.com/arc6789" style="color:white"target="_blank"><i class="fa fa-github fa-2x"></i></a>
+					<a href="https://www.behance.net/anusuyachoudhury" target="_blank"><i class="fa fa-behance fa-2x"></i></a>
+
+					<style type="text/css">
+					.modal-body p a{text-decoration:none;}
+					.modal-body p a:hover{color:#7f60b2;}
+					.modal-body a i{text-decoration: none; color:white;}
+					.modal-body a i:hover{color:#7f60b2;}
+
+
+					</style>
+			</div>
+
+	      </div>
+	      <div class="modal-footer" style="border:none">
+	        <button type="button" class="btn" style="background-color:#999999" data-dismiss="modal">Close</button>
+
+	        <style type="text/css">
+	        .modal-footer button:hover{color:#7f60b2;}
+	        </style>
+	        
+	      </div>
+
+	      		
 					
 
-			        <div class="modal-body text-center">
-			        
-			          <img class="design img-responsive img-thumbnail" src="img/PSAP_UI_3-latesttt1.png">
-			          
-			          
-			        </div>
-			        <div class="modal-footer">
-			          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-			        </div>
-
-
-			        </div>
-
-			      </div>
-			      </div>
-		      </div>
-	  	</div> <!--END OF HYBRID UI POINT MODAL -->
+					
+	    </div>
+	  </div>
+	</div> <!--Contact Modal Ends--> 
 
 
 </div>
@@ -407,12 +480,12 @@
 <footer>
         <div class="container-fluid" style="background-color:black; color:#A5A5A5; opacity:0.9; margin-top:20px;" >
             <div class="row" style="padding-top:30px;">
-                <div class="col-lg-7 text-left" >
+                <div class="col-lg-7 text-left" style="padding-left:30px" >
                     <p>&copy; Anusuya Choudhury 2015</p>
-                    <p style="font-size: 15px;">This website has been built from ground up using the Bootstrap framework. Fonts have been provided by Google's Font API and icons by Font Awesome. Last some jQuery magic has been added during the process!</p>
+                    <p style="font-size: 15px;">This website has been built from ground up using the Bootstrap framework. Fonts have been provided by Google's Font API and icons by Font Awesome. Last some jQuery magic has been added to the recipe.</p>
                   
 				</div>
-				<div class="col-lg-5 text-right">
+				<div class="col-lg-5 text-right" style="padding:30px 30px 10px 50px;">
 					<a href="https://www.linkedin.com/in/anusuyaroychoudhury" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a>
 					<a href="https://github.com/arc6789" target="_blank"><i class="fa fa-github fa-2x"></i></a>
 					<a href="https://www.behance.net/anusuyachoudhury" target="_blank"><i class="fa fa-behance fa-2x"></i></a>
@@ -421,6 +494,7 @@
         </div>
 
 </footer>
+
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script src="js/jquery.js"></script>
