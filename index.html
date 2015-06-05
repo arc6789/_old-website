@@ -36,15 +36,14 @@
 	.fa{ padding-left: 10px;}
 
 
-    .some{font-family: 'Capriola', 
-    sans-serif;
+    .some{font-family: 'Roboto', sans-serif;
 	}
 
 
 	.des{margin-top:120px;}
-	.des img{transition: all 0.5s ease;}
+	.des-hov{transition: all 0.5s ease;}
 
-	.des img:hover{opacity:0.1; background:#414247; box-shadow:10px 10px 50px 20px black inset;}
+	.des-hov:hover{opacity:0.1; background:#414247; box-shadow:10px 10px 50px 20px black inset;}
 
 	a{text-decoration: none}
 
@@ -82,8 +81,8 @@
 	
 	
 			$(document).ready(function(){
-			    $(".nav li").click(function(){
-			        $("this").css("background-color","#E3E2E5");
+			    $(".des-hov:first-child").mouseover(function(){
+			        $(".click-me").css("display","inline");
 			    });
 			});
 
@@ -97,7 +96,7 @@
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
     	<!-- <div style="float:left"> -->
-    	<a class="navbar-brand some" style="color:white; opacity:2; float:left" href="#"><h3 style="margin-top:0; margin-bottom:0; padding-bottom:3px;">Anusuya Choudhury</h3></a>
+    	<a class="navbar-brand some" style="color:white; opacity:2; float:left" href="#"><h4 style="margin-top:0; margin-bottom:0; padding-bottom:3px; font-size:20px; letter-spacing:1px">Anusuya Choudhury</h4></a>
     	
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" style="float:right">
         <span class="sr-only">Toggle navigation</span>
@@ -121,15 +120,17 @@
 <header>
 	<!-- <div class="container" style="max-width:100%; margin:0">
 		<div class="row"> -->
-			<div class="jumbotron" style="background-color:#8B77C1; margin-top:0; opacity:0.5">
-				<div style="color:white; padding:65px 35px 50px 35px;">
+			<div class="jumbotron" style="background-color:#8B77C1; margin-top:0; opacity:0.5; padding-bottom:0">
+				<div style="color:white; padding:65px 35px 40px 35px;">
 				
-				<div style="text-align:center; margin:15px auto 10px ;width:200px; height:200px;">
+				<!-- <div style="text-align:center; margin:15px auto 10px ;width:200px; height:200px;">
 		        <img src="img/map.png" style="border-radius:50%;width:100%; height:100%; opacity:1;">
-		        </div>
-				  <h1 class="text-center"style="opacity:1; font-size:45px;">Anusuya Roy Choudhury</h1> 
-				  <h2 style="text-align:center; font-size:25px"> I design and develop front end technologies!</h2>
-				  <h3 style="font-size:20px"><i>Note* This site is still under construction...but meanwhile check out some of the projects I have worked on or are works in progress</i></h3> 
+		        </div> -->
+		        
+				  <h1 class="text-center"style="opacity:1; font-size:60px;">Anusuya Choudhury</h1> 
+				
+				  <h2 style="text-align:center; font-size:30px;"> I design and develop front end technologies!</h2>
+				  <!-- <p style="font-size:20px; padding-top:40px">Note*  but meanwhile check out some of the projects I have worked on or are works in progress</p>  -->
 				 </div>
 			</div>
 	<!-- 	</div>
@@ -239,10 +240,12 @@
 					<div class="col-md-3 text-center design" style=" background-color:white; padding:10px; margin:20px 50px 0 50px;">
 						<!-- <div class="inner" style="padding:20px"> -->
 							<a href="#" data-toggle="modal" data-target="#flaticonsModal">
-							<div style="width:100%; height:100%; background-color:#F5F5F5">
+							<div class="des-hov"style="width:100%; height:100%; background-color:#F5F5F5">
 							
 								<img src="img/all-icons.png" style="padding:15px" class="img-responsive"><!--design img-thumbnail img-responsive-->
-							
+								<!-- <div class="click-me" style="position:absolute; left:100px; top:100px; display:none ">
+									<p class="click-par">Click Me!</p>
+								</div> -->
 							</div>
 							</a>
 							<div class="img-caption" style="padding:5px;">
@@ -254,12 +257,14 @@
 						
 					</div> <!--END of GDI FLAT ICONS COLUMN-->
 
+					
+
 					<!--HYBRID POINT LOGO COLUMN-->
 				  	<div class="col-md-3 text-center design" style=" background-color:white; padding:10px; margin: 20px 20px;">
 				  		<!-- <div class="inner" style="padding:20px"> -->
 					  		<a href="#" data-toggle="modal" data-target="#hybridlogo">
-				  			<div style="background-color:#F5F5F5;">
-								<img src="img/Hybrid.png" style="padding: 25px; text-align:center" class="img-responsive">
+				  			<div class="des-hov"style="background-color:#F5F5F5; height:200px;">
+								<img src="img/Hybrid.png" style="padding:20px; margin:0 auto;height:100%; text-align:center" class="img-responsive">
 							</div>
 							</a>
 						
@@ -274,7 +279,7 @@
 					<div class="col-md-3 text-center design" style="background-color:white; padding:10px; margin:20px 50px 0 50px;">
 						<!-- <div class="inner" style="padding:20px"> -->
 							<a href="#" data-toggle="modal" data-target="#hybridpointModal">
-								<div style="background-color:white;">
+								<div class="des-hov"style="background-color:white;">
 									<img src="img/psap-crop.png" class="img-responsive" style=" width:100%">
 								</div>
 							</a>
@@ -398,7 +403,7 @@
 				<div class="row desc" style="padding:40px auto">
 	        		<div class="col-lg-8 col-lg-offset-2">
 	        			<h3 class="text-center">UX/UI Design</h3>
-				        <p>This is a very similar mockup I designed for a geolocation software development company I interned at. All elements in this UI has been designed by me except for the Google Map. The implementation of this UI looked quite different due to the company's changes in requirements . </p> <p><b><i> Tools: Adobe Illustrator/Photoshop, GIMP</i></b></p> 
+				        <p>This is a very similar mockup I designed for a geolocation software development company I interned at. Each element in this UI has been designed by me except for the Google Map.</p> <p><b><i> Tools: Adobe Illustrator/Photoshop, GIMP</i></b></p> 
 
 	        		</div>
 	    		</div>
