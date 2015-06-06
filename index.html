@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -77,16 +78,50 @@
     padding-right: 0 !important;
 	}
 
+@media(max-width: 400px) {
+   p{
+        font-size: 18px !important;
+
+    }
+
+    .home-body{margin: 20px !important}
+
+    .des-column{margin:15px !important;}
+
+    footer p{font-size: 14px !important}
+}
+
 </style>
 
 <script type="text/javascript">
 	
 	
-			$(document).ready(function(){
-			    $(".des-hov:first-child").mouseover(function(){
-			        $(".click-me").css("display","inline");
-			    });
-			});
+// 			$(document).ready(function(){
+// 			    $(".des-hov:first-child").mouseover(function(){
+// 			        $(".click-me").css("display","inline");
+// 			    });
+
+// 			    $(".navbar-nav li a").click(function(event) {
+// $(".navbar-collapse").collapse('hide');
+// });
+// 			});
+
+
+ // $(document).ready(function () {
+ //        $(".navbar-nav").click(function(event) {
+ //          $(".navbar-collapse").collapse('hide');
+ //        });
+ //      });
+	// $(document).ready(function () {
+	// 	$(".navbar-toggle").click(function(event) {
+	// 		if($(".navbar-collapse").css("display","none")){
+	// 				// $(".navbar-collapse").collapse("hide");
+	// 				alert("hi")
+	// 		}
+
+
+	// 	});
+	// });
 
 </script>
 </head>
@@ -106,7 +141,6 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -118,6 +152,12 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+
+
+
+
+
+
 
 <header>
 	<!-- <div class="container" style="max-width:100%; margin:0">
@@ -141,7 +181,8 @@
 </header>
 
 <div class="container">
-	<div class="row" style="margin:50px;">
+	<div class="row home-body" style="margin:50px;">
+		<div class="col-lg-12">
 
 		<section class="dev">
 			<!-- Development -->
@@ -232,7 +273,7 @@
 					<!--DESIGN HEADER AREA!-->
 
 					<h1 class="text-center">DESIGN</h1>
-					<p>I usually do alot of my own design work especially for all my personal projects. They range from prototyping wireframes to designing mockups to creating graphic icons. I love the design process just as much as my development process. Usual go to tools are almost always Photoshop or Illustrator or sometimes just pencil and paper. Click below to expand some of these designs.</br></br></p>
+					<p class="text-center">I usually do alot of my own design work especially for all my personal projects. They range from prototyping wireframes to designing mockups to creating graphic icons. I love the design process just as much as my development process. Usual go to tools are almost always Photoshop or Illustrator or sometimes just pencil and paper. Click below to expand some of these designs.</br></br></p>
 
 					<!--Column for GDI FLAT ICONS-->
 				</div>
@@ -240,7 +281,7 @@
 				<div class="row">
 					<!-- <div style="width:800px; margin:0 auto"> -->
 					
-					<div class="col-md-3 text-center design" style=" background-color:white; padding:10px; margin:20px 50px 0 50px;">
+					<div class="col-md-3 text-center design des-column" style=" background-color:white; padding:10px; margin:20px 50px 0 50px;">
 						<!-- <div class="inner" style="padding:20px"> -->
 							<a href="#" data-toggle="modal" data-target="#flaticonsModal">
 							<div class="des-hov"style="width:100%; height:100%; background-color:#F5F5F5">
@@ -263,7 +304,7 @@
 					
 
 					<!--HYBRID POINT LOGO COLUMN-->
-				  	<div class="col-md-3 text-center design" style=" background-color:white; padding:10px; margin: 20px 20px;">
+				  	<div class="col-md-3 text-center design des-column" style=" background-color:white; padding:10px; margin: 20px 20px;">
 				  		<!-- <div class="inner" style="padding:20px"> -->
 					  		<a href="#" data-toggle="modal" data-target="#hybridlogo">
 				  			<div class="des-hov"style="background-color:#F5F5F5; height:200px;">
@@ -279,7 +320,7 @@
 					</div> <!--END of HYBRID POINT LOGO COLUMN-->
 
 				  	<!--COLUMN for HYBRID POINT UI MODAL -->
-					<div class="col-md-3 text-center design" style="background-color:white; padding:10px; margin:20px 50px 0 50px;">
+					<div class="col-md-3 text-center design des-column" style="background-color:white; padding:10px; margin:20px 50px 0 50px;">
 						<!-- <div class="inner" style="padding:20px"> -->
 							<a href="#" data-toggle="modal" data-target="#hybridpointModal">
 								<div class="des-hov"style="background-color:white;">
@@ -444,8 +485,8 @@
 	        <h3 class="modal-title text-center" id="myModalLabel" style="color:white">Contact Me</h3>
 	      </div>
 	      <div class="modal-body">
-	      	<div style="padding:15px 100px;color:#999999">
-		        <p> The best way to contact me is to email me at <a href="mailto:anusuyarc89@gmail.com">anusuyarc89@gmail.com</a></p>
+	      	<div style="padding:15px 20px; text-align:center;color:#999999">
+		        <p> The best way to contact me is to email me at <a href="mailto:anusuyarc89@gmail.com">anusuyarc89@gmail.com</a></p></br>
 		        <p> But you can also reach me at my following sites:</p>
 	        </div>
 	        <div style="color:white; text-align:center">
@@ -481,7 +522,7 @@
 	  </div>
 	</div> <!--Contact Modal Ends--> 
 
-
+</div>
 </div>
 </div>
 
@@ -491,6 +532,7 @@
                 <div class="col-lg-7 text-left" style="padding-left:30px" >
                     <p>&copy; Anusuya Choudhury 2015</p>
                     <p style="font-size: 15px;">This website has been built from ground up using the Bootstrap framework. Fonts have been provided by Google's Font API and icons by Font Awesome. Last some jQuery magic has been added to the recipe.</p>
+                   <!--  <p style="font-size:13px">Note* This website is still under construction. Bug fixes and all...</p> -->
                   
 				</div>
 				<div class="col-lg-5 text-right footer-contact" style="padding:30px 30px 10px 50px;">
