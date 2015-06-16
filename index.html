@@ -20,7 +20,7 @@
 	<!-- <link href="css/bootstrap.css" rel="stylesheet"> -->
 	<link href='http://fonts.googleapis.com/css?family=Nixie+One|Unkempt|Muli|Julius+Sans+One|Amatic+SC|Handlee|Capriola' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Biryani|Roboto' rel='stylesheet' type='text/css'>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	
     <style type="text/css">
 
     body{background: url('img/concrete_seamless/concrete.png') repeat center fixed;
@@ -77,7 +77,10 @@
 	body {
     padding-right: 0 !important;
 	}
+
+	.modal{padding-left: 0px !important}
 /*400px*/
+
 @media(max-width: 800px) {
    p{
         font-size: 16px !important;
@@ -92,7 +95,11 @@
 
     header h1{font-size:50px !important}
 
-    header p{font-size:17px !important}
+    header p{font-size:18px !important}
+
+    .title h3, .title i {font-size: 22px !important;}
+
+
 }
 
 </style>
@@ -100,31 +107,21 @@
 <script type="text/javascript">
 	
 	
-// 			$(document).ready(function(){
-// 			    $(".des-hov:first-child").mouseover(function(){
-// 			        $(".click-me").css("display","inline");
-// 			    });
+	// $(document).ready(function(){
 
-// 			    $(".navbar-nav li a").click(function(event) {
-// $(".navbar-collapse").collapse('hide');
-// });
-// 			});
-
-
- // $(document).ready(function () {
- //        $(".navbar-nav").click(function(event) {
- //          $(".navbar-collapse").collapse('hide');
- //        });
- //      });
-	// $(document).ready(function () {
-	// 	$(".navbar-toggle").click(function(event) {
-	// 		if($(".navbar-collapse").css("display","none")){
-	// 				// $(".navbar-collapse").collapse("hide");
-	// 				alert("hi")
-	// 		}
-
-
+	// 	// Closes the Responsive Menu on Menu Item Click
+	// 	$('.navbar-collapse ul li a').click(function() {
+	// 	    $('.navbar-toggle:visible').click();
+	// 	    alert("hi")
 	// 	});
+	 
+
+	// 	// $(document).on('click','.navbar-collapse.in',function(e) {
+	// 	//     if( $(e.target).is('a') ) {
+	// 	//         $(this).collapse('hide');
+	// 	//     }
+	// 	// });
+
 	// });
 
 </script>
@@ -132,14 +129,14 @@
 <body>
 
 
-<nav class="navbar navbar-default navbar-fixed-top">
+<div class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
     	<!-- <div style="float:left"> -->
     	<a class="navbar-brand some" style="color:white; opacity:2; float:left" href="#"><h4 style="margin-top:0; margin-bottom:0; padding-bottom:3px; font-size:20px; letter-spacing:1px">Anusuya Choudhury</h4></a>
     	
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" style="float:right">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -148,14 +145,15 @@
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <div class="navbar-collapse collapse " id="bs-example-navbar-collapse-1" aria-expaded="false">
       <ul class="nav navbar-nav navbar-right">
         <li class="active"><a href="#">HOME </a></li>
         <li class=""><a style="color:white" href="#" data-toggle="modal" data-target="#contactModal">CONTACT</a></li>
+   	 </ul>
         <!-- <li><a style="color:white" href="#" data-toggle="modal" data-target="#gdiModal">RESUME</a></li> -->
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
-</nav>
+</div>
 
 
 
@@ -200,17 +198,17 @@
 
 				<!--TUMBLR DEV section -->
 				<div class="row row-dev">
-					<div class="col-lg-8 text-center" style="float:right">
+					<div class="col-lg-8 text-center" style="float:right; max-width:100%">
 						<img src="img/tumblr-theme2.png" class="img-thumbnail img-responsive" style="margin-top:20px;">
 					</div>
 					<div class="col-lg-4 text-center" style="float:left">
 						<div class="content" style="margin-top:30px;">
-							<div class="row text-center" style=" width:217px; margin: 0 auto">
+							<div class="row title text-center" style=" width:217px; margin: 0 auto">
 								<i class="fa fa-tumblr-square fa-2x" style="float:left; padding:0"></i>
 								<h3 style="float:left; padding-left:12px; margin-top:0px;">Tumblr Theme</h3>
 							</div>
-							<div class="row" style="padding-top:20px; line-height:2">
-							<p id="thisis" class="tumblr-git" style="font-size:19px"> Tumblr theme development in progress. All colors, fonts, backgrounds customizable </br> Code so far <a href="https://github.com/arc6789/my-theme" style="text-decoration:none; color:#f25ea8"target="_blank"><i class="fa fa-github-alt fa-1x"></i> </a> </br>Updates available soon...</br></br>
+							<div class="row" style="padding-top:20px; line-height:2;">
+							<p id="thisis" class="tumblr-git" style="font-size:19px"> Tumblr theme development in progress. All colors, fonts, backgrounds customizable. Code is open source.</br> Code so far <a href="https://github.com/arc6789/my-theme" style="text-decoration:none; color:#f25ea8"target="_blank"><i class="fa fa-github-alt fa-1x"></i> </a> </br>Updates available soon...</br></br>
 								<b style="font-size:17px;" style="text-align:left">Roles: Design and Development</b></br></br>
 								<b style="font-size:17px;" class="text-left">Tools: Tumblr development platform</b></p>
 							</div>
@@ -226,7 +224,7 @@
 					</div>
 					<div class="col-lg-4 text-center">
 						<div class="content" style="margin-top:30px;">
-							<div class="row" style=" width:235px; margin: 0 auto">
+							<div class="row title" style=" width:235px; margin: 0 auto">
 								<i class="fa fa-map-marker fa-2x" style="float:left; padding:0"></i> 
 								<h3 style="float:left; padding-left:12px; margin-top:0px;">Maps for Meetup</h3>
 							</div>
@@ -243,14 +241,14 @@
 
 				<!--HYBRID POINT UI section-->
 				<div class="row row-dev">
-					<div class="col-lg-8 text-center" style="float:right">
+					<div class="col-lg-8 text-center" style="float:right; max-width:100%">
 						<img src="img/site.png" class="img-thumbnail img-responsive" style="margin-top:20px;">
 						<!---more images were here. pasted code to the bottom-->
 					</div>
 					<div class="col-lg-4 text-center" style="float:left">
 						<div class="content" style="margin-top:30px;">
 
-							<div class="row" style=" width:220px; margin: 0 auto">
+							<div class="row title" style=" width:220px; margin: 0 auto">
 								<i class="fa fa-location-arrow fa-2x" style="float:left; padding:0"></i>
 								<h3 style="float:left; padding-left:13px; margin-top:0px;">Hybrid Point UI</h3>
 							</div>
@@ -282,7 +280,7 @@
 					<!--Column for GDI FLAT ICONS-->
 				</div>
 			
-				<div class="row">
+				<div class="row" style="">
 					<!-- <div style="width:800px; margin:0 auto"> -->
 					
 					<div class="col-md-3 text-center design des-column" style=" background-color:white; padding:10px; margin:20px 50px 0 50px;">
@@ -308,7 +306,7 @@
 					
 
 					<!--HYBRID POINT LOGO COLUMN-->
-				  	<div class="col-md-3 text-center design des-column" style=" background-color:white; padding:10px; margin: 20px 20px;">
+				  	<div class="col-md-3 text-center design des-column" style=" background-color:white; padding:10px; margin: 20px 20px 0 20px;">
 				  		<!-- <div class="inner" style="padding:20px"> -->
 					  		<a href="#" data-toggle="modal" data-target="#hybridlogo">
 				  			<div class="des-hov"style="background-color:#F5F5F5; height:200px;">
@@ -551,8 +549,15 @@
 
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<script src="js/jquery.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	 $(document).ready(function () {
+        $(".navbar-nav li.trigger-collapse a").click(function(event) {
+          $(".navbar-collapse").collapse('hide');
+        });
+      });
+</script>
 </body>
 </html>
 
