@@ -54,7 +54,6 @@
 
 	.navbar, header{margin:0;border:0; border-radius: 0;}
 	
-	.design{}
 
 	.navbar-default{opacity:0.9; background-color: #414247}
 
@@ -89,7 +88,7 @@
 
     .home-body{margin: 20px !important}
 
-    .des-column{margin:15px !important;}
+    .des-column{}
 
     footer p{font-size: 14px !important}
 
@@ -104,30 +103,13 @@
 
 </style>
 
-<script type="text/javascript">
-	
-	
-	// $(document).ready(function(){
-
-	// 	// Closes the Responsive Menu on Menu Item Click
-	// 	$('.navbar-collapse ul li a').click(function() {
-	// 	    $('.navbar-toggle:visible').click();
-	// 	    alert("hi")
-	// 	});
-	 
-
-	// 	// $(document).on('click','.navbar-collapse.in',function(e) {
-	// 	//     if( $(e.target).is('a') ) {
-	// 	//         $(this).collapse('hide');
-	// 	//     }
-	// 	// });
-
-	// });
-
-</script>
 </head>
 <body>
 
+
+<!-- ********************************************************************************************************
+	********* NAV BAR 
+	****************************************************************************************************** -->
 
 <div class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
@@ -157,9 +139,9 @@
 
 
 
-
-
-
+<!-- ********************************************************************************************************
+	********* HEADER (NAME, TITLE, DESCRIPTION)
+	****************************************************************************************************** -->
 
 <header>
 	<!-- <div class="container" style="max-width:100%; margin:0">
@@ -175,16 +157,23 @@
 				  <h2 style="text-align:center; font-size:27px;"> Front End/UI Developer</h2>
 				
 				  <p style="text-align:center;"> I design and develop front end for software.</p>
-				  <!-- <p style="font-size:20px; padding-top:40px">Note*  but meanwhile check out some of the projects I have worked on or are works in progress</p>  -->
 				 </div>
 			</div>
 	<!-- 	</div>
 	</div> -->
 </header>
 
+<!-- ********************************************************************************************************
+	********* BODY (DEVELOPMENT and DESIGN PROJECTS) 
+	****************************************************************************************************** -->
+
 <div class="container">
 	<div class="row home-body" style="margin:50px;">
 		<div class="col-lg-12">
+
+		<!-- ********************************************************************************************************
+		********* DEVELOPMENT PROJECTS
+		****************************************************************************************************** -->
 
 		<section class="dev">
 			<!-- Development -->
@@ -267,88 +256,91 @@
 
 
 
+		<!-- ********************************************************************************************************
+		********* DESIGN PROJECTS
+		****************************************************************************************************** -->
+
 		<!---Design Section-->
 		<section class="des">
-
-
-				<div class="row desc-header">
-					<!--DESIGN HEADER AREA!-->
-
-					<h1 class="text-center">DESIGN</h1>
-					<p class="text-center">I usually do alot of my own design work especially for all my personal projects. They range from prototyping wireframes to designing mockups to creating graphic icons. I love the design process just as much as my development process. Usual go to tools are almost always Photoshop or Illustrator or sometimes just pencil and paper. Click below to expand some of these designs.</br></br></p>
-
-					<!--Column for GDI FLAT ICONS-->
-				</div>
-			
-				<div class="row" style="">
-					<!-- <div style="width:800px; margin:0 auto"> -->
-					
-					<div class="col-md-3 text-center design des-column" style=" background-color:white; padding:10px; margin:20px 50px 0 50px;">
-						<!-- <div class="inner" style="padding:20px"> -->
-							<a href="#" data-toggle="modal" data-target="#flaticonsModal">
-							<div class="des-hov"style="width:100%; height:100%; background-color:#F5F5F5">
-							
-								<img src="img/all-icons.png" style="padding:15px" class="img-responsive"><!--design img-thumbnail img-responsive-->
-								<!-- <div class="click-me" style="position:absolute; left:100px; top:100px; display:none ">
-									<p class="click-par">Click Me!</p>
-								</div> -->
-							</div>
-							</a>
-							<div class="img-caption" style="padding:5px;">
-						  		<h4 class="text-center">Flat Icons</h4> 
-						 	 	<p style="font-size:17px; margin-top:17px;">Girl Develop It Icons</p> 
-							</div>
-
-						<!-- </div> -->
-						
-					</div> <!--END of GDI FLAT ICONS COLUMN-->
-
-					
-
-					<!--HYBRID POINT LOGO COLUMN-->
-				  	<div class="col-md-3 text-center design des-column" style=" background-color:white; padding:10px; margin: 20px 20px 0 20px;">
-				  		<!-- <div class="inner" style="padding:20px"> -->
-					  		<a href="#" data-toggle="modal" data-target="#hybridlogo">
-				  			<div class="des-hov"style="background-color:#F5F5F5; height:200px;">
-								<img src="img/Hybrid.png" style="padding:20px; margin:0 auto;height:100%; text-align:center" class="img-responsive">
-							</div>
-							</a>
-						
-							<div class="img-caption" style="padding:5px;">
-						  		<h4 class="text-center">Hybrid Point Logo</h4> 
-						 	 	<p style="font-size:17px; margin-top:17px;">Graphic Logo Design</p> 
-							</div>
-						<!-- </div> -->
-					</div> <!--END of HYBRID POINT LOGO COLUMN-->
-
-				  	<!--COLUMN for HYBRID POINT UI MODAL -->
-					<div class="col-md-3 text-center design des-column" style="background-color:white; padding:10px; margin:20px 50px 0 50px;">
-						<!-- <div class="inner" style="padding:20px"> -->
-							<a href="#" data-toggle="modal" data-target="#hybridpointModal">
-								<div class="des-hov"style="background-color:white;">
-									<img src="img/psap-crop.png" class="img-responsive" style=" width:100%">
-								</div>
-							</a>
-
-							<div class="img-caption" style="padding:5px;">
-						  		<h4 class="text-center">Hybrid Point UI</h4> 
-						 	 	<p style="font-size:17px; margin-top:17px;">UX/UI Design Mockup <!-- built using Adobe Photoshop/Illustrator --></p> 
-							</div>
-						<!-- </div> -->
-					</div> <!--END of HYBRID POINT UI COLUMN-->
-
-				<!-- 	</div> -->
-			
+			<div class="row desc-header">
+				<!--DESIGN HEADER AREA!-->
+				<h1 class="text-center">DESIGN</h1>
+				<p class="text-center">I usually do alot of my own design work especially for all my personal projects. They range from prototyping wireframes to designing mockups to creating graphic icons. I love the design process just as much as my development process. Usual go to tools are almost always Photoshop or Illustrator or sometimes just pencil and paper. Click below to expand some of these designs.</br></br></p>
 			</div>
 
-			  
+
+		
+			<div class="row center-block" style="">
+				<!-- <div style="width:800px; margin:0 auto"> -->
+
+				<!--Column for GDI FLAT ICONS-->
+				<div class="col-md-4 text-center des-column center-block" style="padding:15px"> <!--10px;margin:20px 50px 0 50px;-->
+					<div class="inner" style="padding:5px; background-color:white">
+						<a href="#" data-toggle="modal" data-target="#flaticonsModal">
+						<div class="des-hov"style="width:100%; height:100%; background-color:#F5F5F5">
+						
+							<img src="img/all-icons.png" style="padding:15px" class="img-responsive"><!--design img-thumbnail img-responsive-->
+							<!-- <div class="click-me" style="position:absolute; left:100px; top:100px; display:none ">
+								<p class="click-par">Click Me!</p>
+							</div> -->
+						</div>
+						</a>
+						<div class="img-caption" style="">
+					  		<h4 class="text-center">Flat Icons</h4> 
+					 	 	<p style="font-size:17px; margin-top:17px;">Girl Develop It Icons</p> 
+						</div>
+
+					</div>
+					
+				</div> <!--END of GDI FLAT ICONS COLUMN-->
+
+				
+
+				<!--HYBRID POINT LOGO COLUMN-->
+			  	<div class="col-md-4 text-center des-column" style="padding:15px;"> <!--margin: 20px 20px 0 20px;-->
+			  		<div class="inner" style="padding:5px; background-color:white">
+				  		<a href="#" data-toggle="modal" data-target="#hybridlogo">
+			  			<div class="des-hov"style="background-color:#F5F5F5; height:200px;">
+							<img src="img/Hybrid.png" style="padding:20px; margin:0 auto;height:100%; text-align:center" class="img-responsive">
+						</div>
+						</a>
+					
+						<div class="img-caption" style="">
+					  		<h4 class="text-center" style="padding:5px 0">Hybrid Point Logo</h4> 
+					 	 	<p style="font-size:17px; margin-top:17px;">Graphic Logo Design</p> 
+						</div>
+					</div>
+				</div> <!--END of HYBRID POINT LOGO COLUMN-->
+
+
+
+			  	<!--COLUMN for HYBRID POINT UI MODAL -->
+				<div class="col-md-4 text-center des-column" style="padding:15px; "> <!--margin:20px 50px 0 50px;-->
+					<div class="inner" style="padding:5px; background-color:white">
+						<a href="#" data-toggle="modal" data-target="#hybridpointModal">
+							<div class="des-hov"style="background-color:white;">
+								<img src="img/psap-crop.png" class="img-responsive" style=" width:100%">
+							</div>
+						</a>
+
+						<div class="img-caption" style="">
+					  		<h4 class="text-center">Hybrid Point UI</h4> 
+					 	 	<p style="font-size:17px; margin-top:17px;">UX/UI Design Mockup <!-- built using Adobe Photoshop/Illustrator --></p> 
+						</div>
+					</div>
+				</div> <!--END of HYBRID POINT UI COLUMN-->
+
+				<!-- 	</div> -->
+			</div>
 		</section>
+
+
+<!-- ********************************************************************************************************
+	********* MODALS (FLAT ICON, LOGO, HYBRID POINT UI, CONTACT)
+	****************************************************************************************************** -->
 
 	<!--GDI FLAT ICONS MODAL-->
 	<div class="modal fade design-modal" id="flaticonsModal" role="dialog">
-
-
-	 <!-- Modal content-->
 	 	<div class="modal-content">
 
 	        <div class="modal-header text-center">
@@ -387,7 +379,7 @@
 
 	<!-- HYBRID POINT LOGO MODAL -->
 	<div class="modal fade design-modal" id="hybridlogo" role="dialog">
-	<!-- Modal content-->
+	
 	  <div class="modal-content">
 	    <div class="modal-header">
 	      <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -425,58 +417,49 @@
 	</div> <!--END OF HYBRID POINT LOGO MODAL -->
 
 
+
+
 	<!-- HYBRID POINT UI MODAL -->
 	<div class="modal fade design-modal" id="hybridpointModal" role="dialog">
+	  	<div class="modal-content">
+	      	<div class="container">
+		    	<div class="row">
+					<div class="col-lg-12">  
 
-	  <!-- Modal content-->
-	  <div class="modal-content">
-	      	
-	        <div class="container">
-	    	<div class="row">
+				        <div class="modal-header">
+				          <button type="button" class="close" data-dismiss="modal">&times;</button>
+				          <h1 class="modal-title text-center">HYBRID POINT UI</h1>
+				        </div>
 
-	        <div class="col-lg-12">   
-		        <div class="modal-header">
-		          <button type="button" class="close" data-dismiss="modal">&times;</button>
-		          <h1 class="modal-title text-center">HYBRID POINT UI</h1>
-		        </div>
+				        <div class="modal-body text-center">
+				        	<img class="design img-responsive img-thumbnail" src="img/PSAP_UI_3-latesttt1.png">
+						</div>
 
-		        <div class="modal-body text-center">
-		        
-		          <img class="design img-responsive img-thumbnail" src="img/PSAP_UI_3-latesttt1.png">
+						<div class="row desc" style="padding:40px auto">
+			        		<div class="col-lg-8 col-lg-offset-2">
+			        			<h3 class="text-center">UX/UI Design</h3>
+						        <p>This is a very similar mockup I designed for a geolocation software development company I interned at. Each element in this UI has been designed by me except for the Google Map.</p> <p><b><i> Tools: Adobe Illustrator/Photoshop, GIMP</i></b></p> 
+							</div>
+			    		</div>
 
-		        </div>
+				        <div class="modal-footer">
+				          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				        </div>
 
-				<div class="row desc" style="padding:40px auto">
-	        		<div class="col-lg-8 col-lg-offset-2">
-	        			<h3 class="text-center">UX/UI Design</h3>
-				        <p>This is a very similar mockup I designed for a geolocation software development company I interned at. Each element in this UI has been designed by me except for the Google Map.</p> <p><b><i> Tools: Adobe Illustrator/Photoshop, GIMP</i></b></p> 
-
-	        		</div>
-	    		</div>
-
-		        <div class="modal-footer">
-		          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-		        </div>
-
-		        
-				
-
-				
-
-	        </div>
-
-	      </div>
-	      </div>
-	  </div>
+			        </div>
+				</div>
+		    </div>
+	  	</div>
 	</div> <!--END OF HYBRID UI POINT MODAL -->
 
 
 	<style type="text/css">
 	.design-modal {color:#4b4b4b;}
 	.design-modal p{color:#787676}
-	
-
 	</style>
+
+
+
 
 	<!-- Contact Modal -->
 	<div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-hidden="true">
@@ -492,18 +475,18 @@
 		        <p> But you can also reach me at my following sites:</p>
 	        </div>
 	        <div style="color:white; text-align:center">
-					<a href="https://www.linkedin.com/in/anusuyaroychoudhury" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a>
-					<a href="https://github.com/arc6789" style="color:white"target="_blank"><i class="fa fa-github fa-2x"></i></a>
-					<a href="https://www.behance.net/anusuyachoudhury" target="_blank"><i class="fa fa-behance fa-2x"></i></a>
+				<a href="https://www.linkedin.com/in/anusuyaroychoudhury" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a>
+				<a href="https://github.com/arc6789" style="color:white"target="_blank"><i class="fa fa-github fa-2x"></i></a>
+				<a href="https://www.behance.net/anusuyachoudhury" target="_blank"><i class="fa fa-behance fa-2x"></i></a>
 
-					<style type="text/css">
-					.modal-body p a{text-decoration:none;}
-					.modal-body p a:hover{color:#7f60b2;}
-					.modal-body a i{text-decoration: none; color:white;}
-					.modal-body a i:hover{color:#7f60b2;}
+				<style type="text/css">
+				.modal-body p a{text-decoration:none;}
+				.modal-body p a:hover{color:#7f60b2;}
+				.modal-body a i{text-decoration: none; color:white;}
+				.modal-body a i:hover{color:#7f60b2;}
 
 
-					</style>
+				</style>
 			</div>
 
 	      </div>
@@ -514,12 +497,7 @@
 	        .modal-footer button:hover{color:#7f60b2;}
 	        </style>
 	        
-	      </div>
-
-	      		
-					
-
-					
+	      </div>			
 	    </div>
 	  </div>
 	</div> <!--Contact Modal Ends--> 
@@ -527,6 +505,10 @@
 </div>
 </div>
 </div>
+
+<!-- ********************************************************************************************************
+	********* FOOTER AREA (Theme Description, Social Icons)
+	****************************************************************************************************** -->
 
 <footer>
         <div class="container-fluid" style="background-color:black; color:#A5A5A5; opacity:0.9; margin-top:20px;" >
@@ -544,7 +526,6 @@
 				</div>
             </div>
         </div>
-
 </footer>
 
 
