@@ -25,9 +25,9 @@
 
     body{background: url('img/concrete_seamless/concrete.png') repeat center fixed;
     -webkit-background-size: cover; 
-	background-size: initial;
     -moz-background-size: cover;
     -o-background-size: cover;
+    background-size: initial;
     margin:0;
     } /*initial no-repeat. repeat for moz*/
 
@@ -318,7 +318,7 @@
 				<div class="col-md-4 text-center des-column" style="padding:15px; "> <!--margin:20px 50px 0 50px;-->
 					<div class="inner" style="padding:5px; background-color:white">
 						<a href="#" data-toggle="modal" data-target="#hybridpointModal">
-							<div class="des-hov"style="background-color:white;">
+							<div class="des-hov"style="background-color:white;"> <!--height:200px; overflow-y:hidden-->
 								<img src="img/psap-crop.png" class="img-responsive" style=" width:100%">
 							</div>
 						</a>
@@ -532,6 +532,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+
 <script type="text/javascript">
 	 $(document).ready(function () {
         $(".navbar-nav li.trigger-collapse a").click(function(event) {
