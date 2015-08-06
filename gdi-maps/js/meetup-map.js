@@ -1,6 +1,7 @@
 
 L.mapbox.accessToken = 'pk.eyJ1IjoiYXJjNjc4OSIsImEiOiIyUU9lcmdJIn0.nZKA7rHTaVFz-M2oTt2ZMA';
 var map = L.mapbox.map('map', 'arc6789.78f63ca4').setView([37.7833, -122.4167], 13);  /*examples.map-i86nkdio*/ 
+var geocoder = L.mapbox.geocoder('mapbox.places');//
 
 var MEETUP_URL = "";
 
@@ -13,9 +14,25 @@ function awesomeClick(){
     var meetup_event=document.getElementById('meetup-event').value;
           // "Women-Who-Code-SF";
 
+    var meetup_city = document.getElementById('city-geocode').value; //
+
     if(meetup_key=="" || meetup_event==""){
       alert('Please enter a valid Meetup key and Meetup event')
-    }  
+    };  
+
+    geocoder.query(meetup_city, showMap); //
+
+    function showMap(err, data) {
+      // The geocoder can return an area, like a city, or a
+      // point, like an address. Here we handle both cases,
+      // by fitting the map bounds to an area or zooming to a point.
+      if (data.lbounds) {
+          map.fitBounds(data.lbounds);
+      } else if (data.latlng) {
+          map.setView([data.latlng[0], data.latlng[1]], 13);
+      }
+    }
+
 
     $(document).ready(function(){
           
