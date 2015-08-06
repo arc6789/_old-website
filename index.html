@@ -20,6 +20,11 @@
 	<!-- <link href="css/bootstrap.css" rel="stylesheet"> -->
 	<link href='http://fonts.googleapis.com/css?family=Nixie+One|Unkempt|Muli|Julius+Sans+One|Amatic+SC|Handlee|Capriola' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Biryani|Roboto' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Nixie+One|Unkempt|Muli|Julius+Sans+One|Amatic+SC|Handlee|Capriola' rel='stylesheet' type='text/css'>
+	  
+    <link href='http://fonts.googleapis.com/css?family=Josefin+Slab|Amatic+SC|Handlee' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+    <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.css' rel='stylesheet' />
 	
     <style type="text/css">
 
@@ -72,6 +77,22 @@
 	.tumblr-git a i:hover{color:#d8247e;}
 
 	.footer-contact a i:hover{color:#6135ad;}
+
+	#map { 
+        position:relative;
+        margin: 0 0 0 0; 
+        width:75%; 
+        height: 500px; 
+        float:left;
+        background-color:#E8E8E8; 
+        border-left: 2px solid black;
+        border-top: 2px solid black;
+        border-bottom: 2px solid black   
+      }
+
+        .some{font-family: 'Capriola', 
+    		sans-serif;
+  		}
 
 	body {
     padding-right: 0 !important;
@@ -239,7 +260,7 @@
 								<h3 style="float:left; padding-left:12px; margin-top:0px;">Maps for Meetup</h3>
 							</div>
 							<div class="row" style="padding-top:20px; line-height:2">
-								<p class="meetup-git" style="font-size:19px;"> This project maps the location of upcoming events for any particular Meetup group on a Mapbox map. Additionally also provides certain information like name, address, date and time of each event. The idea is to integrate this project into Girl Develop It - San Jose Chapter's website <br/> Code available on my github page.<a href="https://github.com/arc6789/GDI-Maps" style="text-decoration:none; color:#F95A61" target="_blank"> <i class="fa fa-github-alt fa-1x"></i> </a> <br/><br/> 
+								<p class="meetup-git" style="font-size:19px;"> This project maps the location of upcoming events for any particular Meetup group on a Mapbox map. Additionally also provides certain information like name, address, date and time of each event. The idea is to integrate this project into Girl Develop It - San Jose Chapter's website <br/> <a href="gdi-maps/index.html"> View Live </a>|<a href="https://github.com/arc6789/GDI-Maps" style="color:#F95A61" target="_blank"> View Code <i class="fa fa-github-alt fa-1x"></i> </a><br/> <br/> 
 								<b style="font-size:17px;">Roles: Design and Development</b><br/><br/>
 								<b style="font-size:17px;" class="text-left">Tools used: Meetup's RESTful Api, Mapbox.js, CartoCSS (to stylize map), Bootstrap framework, GeoJSON</b></p>
 								
@@ -359,6 +380,9 @@
 <!-- ********************************************************************************************************
 	********* MODALS (FLAT ICON, LOGO, HYBRID POINT UI, CONTACT)
 	****************************************************************************************************** -->
+
+
+
 
 	<!--GDI FLAT ICONS MODAL-->
 	<div class="modal fade design-modal" id="flaticonsModal" role="dialog">
@@ -549,7 +573,9 @@
         </div>
 </footer>
 
-
+<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.js'></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/meetup-map.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
