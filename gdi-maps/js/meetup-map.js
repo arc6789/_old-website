@@ -40,9 +40,7 @@ function awesomeClick(){
           var MEETUP_URL = "http://api.meetup.com/2/events?key="+meetup_key+"&offset=0&format=json&limited_events=False&group_urlname="+meetup_event+"&sign=true&photo-host=public&page=20&fields=&order=time&desc=false&status=upcoming&callback=";
 
 
-          /*30645f3c726b341f2a6614d4f4b37 my key*/
-          /*547995146f21675d2a7e111f665777 gdi key*/
-          /*fb141cn8ck7e0mhue5i3qs1010   oauthkey*/
+        
 
 
           function convert(epoch){
