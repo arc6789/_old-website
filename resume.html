@@ -8,17 +8,21 @@
     <meta name="author" content="">
 
     <title>Anusuya Roy Choudhury</title>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="font-awesome-4.3.0/css/font-awesome.min.css">
-	
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+ <link rel="stylesheet" href="font-awesome-4.3.0/css/font-awesome.min.css">
+  
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 
 
 
-	<link href="css/bootstrap.css" rel="stylesheet">
-	<link href='http://fonts.googleapis.com/css?family=Nixie+One|Unkempt|Muli|Julius+Sans+One|Amatic+SC|Handlee|Capriola' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Biryani|Roboto' rel='stylesheet' type='text/css'>
+  <!-- <link href="css/bootstrap.css" rel="stylesheet"> -->
+  <link href='http://fonts.googleapis.com/css?family=Nixie+One|Unkempt|Muli|Julius+Sans+One|Amatic+SC|Handlee|Capriola' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Biryani|Roboto' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Nixie+One|Unkempt|Muli|Julius+Sans+One|Amatic+SC|Handlee|Capriola' rel='stylesheet' type='text/css'>
+    
+    <link href='http://fonts.googleapis.com/css?family=Josefin+Slab|Amatic+SC|Handlee' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+    <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.css' rel='stylesheet' />
     <style type="text/css">
 
     body{background: url('img/concrete_seamless/concrete.png') no-repeat center center fixed;
@@ -88,8 +92,19 @@ h1{font-family: 'Roboto', sans-serif;font-weight:bold;}
 <section>
 	<div class="container">
 		<div class="row">
-			<h1 class="text-center">RESUME</h1>
+      <div class="col-lg-12">
+        <h1 class="text-center">Anusuya Roy Choudhury</h1>
+      </div>
+      <div class="col-lg-3 text-center"><a href="#" id="website"></a>
+      </div>
+      <div class="col-lg-3 text-center" id="email">
+      </div>
+      <div class="col-lg-3 text-center" id="phone-number">
+      </div>
+      <div class="col-lg-3text-center" id="location">
+      </div>
 		</div>
+   
 	</div>
 </section>
 
@@ -113,10 +128,21 @@ h1{font-family: 'Roboto', sans-serif;font-weight:bold;}
 
 </footer>
 
-
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-
-<script src="js/jquery.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.js'></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/meetup-map.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+
+<script type="text/javascript">
+   $(document).ready(function () {
+        $(".navbar-nav li.trigger-collapse a").click(function(event) {
+          $(".navbar-collapse").collapse('hide');
+        });
+      });
+</script>
+<script type="text/javascript" src="js/resume-objects.js"></script>
 </body>
 </html>
