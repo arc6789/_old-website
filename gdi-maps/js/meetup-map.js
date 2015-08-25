@@ -39,7 +39,6 @@ function awesomeClick(){
           
 
           var MEETUP_URL = "http://api.meetup.com/2/events?key="+meetup_key+"&offset=0&format=json&limited_events=False&group_urlname="+meetup_event+"&sign=true&photo-host=public&page=20&fields=&order=time&desc=false&status=upcoming&callback=";
-/*"http://api.meetup.com/2/events?key=d30645f3c726b341f2a6614d4f4b37&offset=0&format=json&limited_events=False&group_urlname=Women-Who-Code-SF&sign=true&photo-host=public&page=20&fields=&order=time&desc=false&status=upcoming&callback="*/
 
         
 
