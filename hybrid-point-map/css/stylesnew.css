@@ -15,6 +15,9 @@ body{
 	background-color:#eeeeee;
 }
 
+#container{width:90%; margin:auto; padding-top:50px; padding-bottom:20px;}
+
+#map-row{border:2px solid black}
 
 #top{
 	height:30px; 
@@ -104,6 +107,7 @@ body{
 .arrow-up {
 	float: right;
 	top: -6px;
+	right:280px;
 	display: none;
 	position: absolute;
 	z-index: 1;
@@ -166,6 +170,7 @@ body{
 	padding:10px 7px 11px 12px; 
 	height:243px;
 	font-size:13px;
+	right:205px;
 }
 
 .txtfld{width:150px; 
@@ -226,6 +231,7 @@ body{
 .conten{
 	text-align: left; 
 	margin-top:10px;
+	line-height:20px;
 }
 
 
@@ -312,7 +318,7 @@ background-color:#207cca}
 
 
 .but{
-	margin:0; 
+	margin:0 0 0 10px; 
 	padding: 2px;
 	border-left:2px solid #eaeaea;
 	border-top:2px solid #eaeaea;
@@ -320,6 +326,7 @@ background-color:#207cca}
 	border-right:2px solid #747474;
 	background-color:#207cca; 
 	color:#fafafa;
+	float:right;
 }
 
 
@@ -411,3 +418,6 @@ footer{
 	background-color:#10315a
 }
 
+#close-row{padding:0 0 20px 20px; height:70px; width:90%; margin:auto}
+
+#close-row button{float:right; width:100px; padding:10px; color:#317DBE; font-weight:bold; cursor:auto}

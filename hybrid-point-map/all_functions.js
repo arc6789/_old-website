@@ -162,21 +162,12 @@ function initialize() {
 		};
 	});
 
-// 	var defaultBounds = new google.maps.LatLngBounds(
-// 		new google.maps.LatLng(-33.8902, 151.1759)
-// 		new google.mapsLatLng(-33.8474, 1515.2631)
-// 		)
-// 	var options = {
-// 		bounds:defaultBounds
-// 	}
+	// function tableRow{
 
-// 	var input =document.getElementById('input-this');
-// 	maps.control[google.maps.ControlPosition.Top_Left].push(input);
+		
+	// }
 
-// 	var autocomplete = new google.maps.places.Autocomplete(input, options)
-	
-// 	service = new google.maps.places.PlacesService(map);
-// service.nearbySearch(request, callback);
+
 	//FUNCTION FOR DYNAMICALLY GENERATING TABLE ROWS 
 	var strin = document.getElementById("start").innerHTML; 
 	function placeMarker(location) {

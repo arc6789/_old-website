@@ -1,0 +1,154 @@
+body, .concrete-bg {
+  background: url("../img/concrete_seamless/concrete.png") repeat center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: initial;
+  margin: 0; }
+
+/*initial no-repeat. repeat for moz*/
+p {
+  font-family: "adobe-garamond-pro","Adobe Garamond Pro","Georgia",serif;
+  line-height: 1.333em;
+  font-size: 150%; }
+
+.fa {
+  padding-left: 10px; }
+
+.some {
+  font-family: 'Roboto', sans-serif; }
+
+.des {
+  margin-top: 120px; }
+
+.des-hov {
+  transition: all 0.5s ease;
+  background-color: #F5F5F5; }
+
+.des-hov:hover {
+  opacity: 0.1;
+  background: #414247;
+  box-shadow: 10px 10px 50px 20px black inset; }
+
+a {
+  text-decoration: none; }
+
+.row-dev {
+  margin-top: 70px;
+  color: #3D0158;
+  letter-spacing: 1px; }
+
+.desc-header p {
+  margin-top: 35px;
+  color: #3D0158;
+  letter-spacing: 1px; }
+
+.navbar, header {
+  margin: 0;
+  border: 0;
+  border-radius: 0; }
+
+.navbar-default {
+  opacity: 0.9;
+  background-color: #414247; }
+
+.design, .jumbotron {
+  box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15), 0px 2px 3px 0px rgba(0, 0, 0, 0.1); }
+
+.nav a {
+  font-family: 'Muli', sans-serif; }
+
+h1, h2, h3, h4 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold; }
+
+.dev h1 {
+  width: 267px;
+  margin: 0 auto;
+  border-top: 5px solid #4b4b4b;
+  padding-top: 10px;
+  letter-spacing: 1px; }
+
+.des h1 {
+  width: 135px;
+  margin: 0 auto;
+  border-top: 5px solid #4b4b4b;
+  padding-top: 10px;
+  letter-spacing: 1px; }
+
+.gdi-flaticons-class{
+  .des-hov{width:100%}
+  img{padding:15px}
+}
+.hybrid-logo-class {
+  .des-hov{width:100%;height:200px;}
+  img{padding:20px; margin:0 auto; height:100%;}
+}
+
+.hybridpoint-ui-class{
+  .des-hov{height:200px; overflow-y:hidden;height:100%}
+  img{width: 100%;}
+}
+
+
+
+.modal {
+  padding-left: 0;
+  margin-left: 0; }
+
+.meetup-git a i:hover {
+  color: #d33036; }
+
+.tumblr-git a i:hover {
+  color: #d8247e; }
+
+.footer-contact a i:hover {
+  color: #6135ad; }
+
+#map {
+  position: relative;
+  margin: 0 0 0 0;
+  width: 75%;
+  height: 500px;
+  float: left;
+  background-color: #E8E8E8;
+  border-left: 2px solid black;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black; }
+
+.some {
+  font-family: 'Capriola',sans-serif; }
+
+body {
+  padding-right: 0 !important; }
+
+.modal {
+  padding-left: 0px !important; }
+
+.des-column {
+  padding: 15px; }
+
+.des-column .inner {
+  padding: 5px;
+  background-color: white; }
+
+.img-caption p {
+  font-size: 17px;
+  margin-top: 17px; }
+
+/*400px*/
+@media (max-width: 800px) {
+  p {
+    font-size: 16px !important; }
+  .home-body {
+    margin: 20px !important; }
+  footer p {
+    font-size: 14px !important; }
+  header h1 {
+    font-size: 50px !important; }
+  header p {
+    font-size: 18px !important; }
+  .title h3, .title i {
+    font-size: 22px !important; }
+  #therapywebsite .modal-body {
+    padding: 10px !important; } }

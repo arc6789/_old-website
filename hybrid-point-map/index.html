@@ -12,25 +12,6 @@
 <script type="text/javascript" src="all_functions.js"> </script>
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
 
-<script type="text/javascript">
-var map; 
-
-var service;
-var infowindow;
-
-// function initialize() {
-// 	var myLatlng = new google.maps.LatLng(39.8282, -98.5795);
-// 	var mapOptions = {
-// 	    zoom: 4,
-// 	    center: myLatlng,
-// 	    mapTypeId: google.maps.MapTypeId.RoadMap,
-	           /* mapTypeControlOptions: {
-	                mapTypeIds: [google.maps.MapTypeId.ROADMAP, google.maps.MapTypeId.TERRAIN, google.maps.MapTypeId.HYBRID , google.maps.MapTypeId.SATELLITE] 
-	            }*/
-	//   };
-	// map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);}
-	// google.maps.event.addDomListener(window, 'load', initialize);
-</script>
 </head>
 
 <body> 
@@ -38,21 +19,21 @@ var infowindow;
 <!-- <div class="container">
 <div class="row">
 <div class="col-lg-12"> -->
-<div style="width:90%; margin:auto; padding-top:50px; padding-bottom:20px;">
-<div style="border:2px solid black">
+<div id="container">
+<div id="map-row">
 <div id="top"> 
 	
 	<img id ="image-logo" alt="Polaris-Logo-Image" src="images/HybridLocations.png" />
 	<a href="http://www.brokenlink.c/" class="company">HYBRID POINT</a>
 	<div id="top-right">
 		<div class="startool">
-			<a id="start" href="#" onmouseover="mouseOver()" onmouseout="mouseOut()">Start</a> <!-- /*#282828*/ -->
+			<a id="start" href="#" onmouseover="mouseOver()" onmouseout="mouseOut()">Start</a>
 		</div>
 		<div class= "locationtool">
 			<a class="locationsettings" href="#">Settings</a>
 		</div>
 		<div class="maptools">
-			<a class="popbutton" href="#"><!-- &#9662;  --> Map Tools</a>
+			<a class="popbutton" href="#"> Map Tools</a>
 		</div>
 	</div>
 						
@@ -62,29 +43,27 @@ var infowindow;
 <div id="divtopArea">
 
 	<!--LOCATION ENABLING SETTINGS POP UP BOX -->
-	<div class="arrow-up" style="right:280px;"></div>
-	<ul class="pop-up" style="right:205px; list-style:none">
-		<input class="but" style="float:right; margin-right:10px;" type="submit" name="gpssubmit" value="Submit" /> 
+	<div class="arrow-up"></div>
+	<ul class="pop-up">
+		<input class="but" type="submit" name="gpssubmit" value="Submit" /> 
 		<li class="conten">
-		</li>
-		<li class="conten" style="line-height:20px">
 			<input id="gps" type="checkbox" name="get gps" checked="checked"/>ENABLE GPS
 			<input class="txtfld" type="text" placeholder="Enter update rate..." size=""></input>	
 		</li>
 		<hr>
-		<li class="conten" style="line-height:20px">
+		<li class="conten">
 			<input id="wifi" type="checkbox" name="get wifi" checked="checked"/>ENABLE WIFI
 			<input class="txtfld" type="text" size="" placeholder="Enter update rate..."></input> 	
 		</li>
 		<hr>
-		<li class="conten" style="line-height:20px">
+		<li class="conten">
 			<input id="network" type="checkbox" name="get network" checked="checked"/>ENABLE NETWORK
-			<input class="txtfld" style="" type="text" size="" placeholder="Enter update rate..."></input> 	
+			<input class="txtfld" type="text" placeholder="Enter update rate..."></input> 	
 		</li>
 		<hr>
-		<li class="conten" style="line-height:20px">
+		<li class="conten">
 			<input id="barometer" type="checkbox" name="get baro" checked="checked"/>ENABLE BAROMETER
-			<input class="txtfld" type="text" size="" placeholder="Enter update rate..."></input> 
+			<input class="txtfld" type="text" placeholder="Enter update rate..."></input> 
 		</li>
 	</ul>
 
@@ -94,7 +73,7 @@ var infowindow;
 	<ul class="popup " style="right:98px">
 		<li style="margin-bottom: 35px">
 			<strong id="deviceId-text"> Device ID
-				<input id="device" type="text" size=""></input> 
+				<input id="device" type="text"></input> 
 			</strong>
 		</li>
 		<br />
@@ -116,12 +95,12 @@ var infowindow;
 		</li>
 		<hr/>
 		<li class="conten">
-			<input id="ShowGeoFenceChk" type="checkbox" name="" value="OFF"/> GeoFence 
+			<input id="ShowGeoFenceChk" type="checkbox" value="OFF"/> GeoFence 
 			<br /> 
 			<div id="geofence-button-div">
-			<button id="saveGeoFence"title="save">Save</button>
-			<button id="loadGeoFence" title="load">Load</button>
-			<button id="resetGeoFence" title="load">Reset</button>
+			<button id="saveGeoFence"title="save" style="border:1px solid white">Save</button>
+			<button id="loadGeoFence" title="load" style="border:1px solid white; margin-left:6px">Load</button>
+			<button id="resetGeoFence" title="load" style="border:1px solid white; margin-left:6px">Reset</button>
 			</div>
 		</li>
 	</ul>
@@ -132,7 +111,7 @@ var infowindow;
 </div>
 
 <!--LOCATION TABLE HEADER-->   
-<div id="mid"> 
+<div id="mid" style="padding:5px 0"> 
 	
 	<div id="contentmid">
 		<!--LOCATION TABLE TITLE -->
@@ -168,28 +147,28 @@ var infowindow;
 	<div class="bottom column2">
 		<div class="scrollit">
                 	<table id="myTable">
-                  		<thead style="" > <!--display:block-->
-		                    	<tr>
-		                    		<!-- <th style="width:4%"><input id="ch" type="checkbox" name="callerrow" value="allrows"/></th> -->
-			                	<th>DEVICE ID</th><th style="">DATE/TIME</th><th>LATITUDE</th><th>LONGITUDE</th>
+                  		<thead> <!--display:block-->
+	                    	<tr>
+		                    	<th>DEVICE ID</th><th>DATE/TIME</th><th>LATITUDE</th><th>LONGITUDE</th>
 			                	<th>ALTITUDE</th><th>SENSOR(S)</th>
-			                	<!--   <th style="width:30px;"></th> -->
-		                    	</tr>
-                    		</thead>
-					<tbody style=""> <!--display:block-->
-	                	<tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-	                    <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-	                    <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-	                   	<tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-	                    <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-	                    <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-	                    <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-	                   	<tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-	                    <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-	                    <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-	                    <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-	                </tbody>
-			</table>
+		                	</tr>
+                    	</thead>
+						<tbody id="tbody"> <!--display:block-->
+						
+		                	<tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+		                    <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+		                    <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+		                   	<tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+		                    <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+		                    <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+		                    <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+		                   	<tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+		                    <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+		                    <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+		                    <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+	                	</tbody>
+	                	
+					</table>
            	</div>
 	</div>
 </div>
@@ -199,10 +178,11 @@ var infowindow;
 </div>
 </div>
 
-<div style="padding:0 0 20px 20px; height:70px; width:90%; margin:auto">
-<a href="../index.html"><button style="float:right; width:100px; padding:10px; color:#317DBE; font-weight:bold; cursor:auto"> CLOSE </button></a>
+<div id="close-row">
+<a href="../index.html"><button> CLOSE </button></a>
 </div>
 </body>
+
 </html>
 
 

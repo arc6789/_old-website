@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="author" content="anusuya roy choudhury">
 
     <title>Anusuya Roy Choudhury</title>
   <!--   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> -->
@@ -14,7 +14,7 @@
 	
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 
 
 	<!-- <link href="css/bootstrap.css" rel="stylesheet"> -->
@@ -25,110 +25,12 @@
     <link href='http://fonts.googleapis.com/css?family=Josefin+Slab|Amatic+SC|Handlee' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
     <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.css' rel='stylesheet' />
+    <link rel="stylesheet" type="text/css" href="css/buttons.css">
 	
-    <style type="text/css">
-
-    body, .concrete-bg{background: url('img/concrete_seamless/concrete.png') repeat center fixed;
-    -webkit-background-size: cover; 
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: initial;
-    margin:0;
-    } /*initial no-repeat. repeat for moz*/
-
-	p{font-family: "adobe-garamond-pro","Adobe Garamond Pro","Georgia",serif; line-height: 1.333em; font-size: 150%;}
-
-
-	.fa{ padding-left: 10px;}
-
-
-    .some{font-family: 'Roboto', sans-serif;
-	}
-
-
-	.des{margin-top:120px;}
-	.des-hov{transition: all 0.5s ease;}
-
-	.des-hov:hover{opacity:0.1; background:#414247; box-shadow:10px 10px 50px 20px black inset;}
-
-	a{text-decoration: none}
-
-	.row-dev{ margin-top:70px;color:#3D0158; letter-spacing: 1px} 
-	
-	.desc-header p{margin-top:35px;color:#3D0158; letter-spacing: 1px}
-
-	.navbar, header{margin:0;border:0; border-radius: 0;}
-	
-
-	.navbar-default{opacity:0.9; background-color: #414247}
-
-	.design,.jumbotron{box-shadow:inset 0px 0px 0px 1px rgba(0,0,0,0.15), 0px 2px 3px 0px rgba(0,0,0,0.1)}
-
-	.nav a{font-family: 'Muli', sans-serif;}
-	
-	h1, h2, h3, h4{font-family: 'Roboto', sans-serif;font-weight:bold;}
-
-	.dev h1{width:267px; margin: 0 auto; border-top: 5px solid #4b4b4b; padding-top:10px; letter-spacing: 1px;}
-	.des h1{width:135px; margin: 0 auto; border-top: 5px solid #4b4b4b; padding-top:10px;letter-spacing: 1px;}
-	.modal{padding-left:0; margin-left: 0}    
-
-	
-	.meetup-git a i:hover{color:#d33036;}
-	.tumblr-git a i:hover{color:#d8247e;}
-
-	.footer-contact a i:hover{color:#6135ad;}
-
-	#map { 
-        position:relative;
-        margin: 0 0 0 0; 
-        width:75%; 
-        height: 500px; 
-        float:left;
-        background-color:#E8E8E8; 
-        border-left: 2px solid black;
-        border-top: 2px solid black;
-        border-bottom: 2px solid black   
-      }
-
-        .some{font-family: 'Capriola', 
-    		sans-serif;
-  		}
-
-	body {
-    padding-right: 0 !important;
-	}
-
-	.modal{padding-left: 0px !important}
-/*400px*/
-
-@media(max-width: 800px) {
-   p{
-        font-size: 16px !important;
-
-    }
-
-    .home-body{margin: 20px !important}
-
-    .des-column{}
-
-    footer p{font-size: 14px !important}
-
-    header h1{font-size:50px !important}
-
-    header p{font-size:18px !important}
-
-    .title h3, .title i {font-size: 22px !important;}
-
-    #therapywebsite .modal-body{padding:10px !important;}
-
-
-}
-
-</style>
+   
 
 </head>
-<body>
-
+<body ng-app="myApp">
 
 <!-- ********************************************************************************************************
 	********* NAV BAR 
@@ -190,7 +92,7 @@
 	********* BODY (DEVELOPMENT and DESIGN PROJECTS) 
 	****************************************************************************************************** -->
 
-<div class="container">
+<div class="container" ng-controller="MainController">
 	<div class="row home-body" style="margin:50px;">
 		<div class="col-lg-12">
 
@@ -211,6 +113,14 @@
 				<div class="row row-dev" style="display:">
 					<div class="col-lg-8 text-center">
 						<img src="img/psychotherapy-website.jpg" class="img-thumbnail img-responsive" style="margin-top:20px;">
+							<div class="buttons-div" style="width:140px; display:none; float:right; position:absolute; bottom:-25px; right:2px">
+								<div style="width:70px; float:left">	
+									<p class="dislikes-num center-block" style="float:left">{{likes}}</p><p class="dislikes center-block" style="float:left"ng-click="likesOne()"><i class="fa fa-thumbs-up center-block hvr-pulse"></i></p>
+								</div>
+								<div style="width:70px; float:right">
+									<p class="likes center-block" style="float:left" ng-click="lovesOne()"><i class="fa fa-heart center-block hvr-pulse"></i></p><p class="likes-num center-block" style="float:left">{{loves}}</p>
+								</div>
+			              	</div>
 					</div>
 					<div class="col-lg-4 text-center">
 						<div class="content" style="margin-top:30px;">
@@ -306,7 +216,7 @@
 		****************************************************************************************************** -->
 
 		<!---Design Section-->
-		<section class="des">
+		<section class="des" style="display:none">
 			<div class="row desc-header">
 				<!--DESIGN HEADER AREA!-->
 				<h1 class="text-center">DESIGN</h1>
@@ -315,7 +225,7 @@
 
 
 		
-			<div class="row" style="">
+			<div class="row">
 				<!-- <div style="width:800px; margin:0 auto"> -->
 
 				<!--Column for GDI FLAT ICONS-->
@@ -330,7 +240,7 @@
 							</div> -->
 						</div>
 						</a>
-						<div class="img-caption" style="">
+						<div class="img-caption">
 					  		<h4 class="text-center">Flat Icons</h4> 
 					 	 	<p style="font-size:17px; margin-top:17px;">Girl Develop It Icons</p> 
 						</div>
@@ -350,7 +260,7 @@
 						</div>
 						</a>
 					
-						<div class="img-caption" style="">
+						<div class="img-caption">
 					  		<h4 class="text-center" style="padding:5px 0">Hybrid Point Logo</h4> 
 					 	 	<p style="font-size:17px; margin-top:17px;">Graphic Logo Design</p> 
 						</div>
@@ -368,7 +278,7 @@
 							</div>
 						</a>
 
-						<div class="img-caption" style="">
+						<div class="img-caption">
 					  		<h4 class="text-center">Hybrid Point UI</h4> 
 					 	 	<p style="font-size:17px; margin-top:17px;">UX/UI Design Mockup <!-- built using Adobe Photoshop/Illustrator --></p> 
 						</div>
@@ -377,9 +287,13 @@
 
 				<!-- 	</div> -->
 			</div>
+			
+
+
+			<!--COLUMN for SAN FraNCISCO Art--> 
 			<div class="row" style="display:none">
 				<div class="col-md-5 text-center des-column" style="padding:15px;">
-				<div class="inner" style="padding:5px; background-color:white">
+					<div class="inner" style="padding:5px; background-color:white">
 						<a href="#" data-toggle="modal" data-target="#sfmodal">
 							<div class="des-hov"style="background-color:white;"> <!--height:200px; overflow-y:hidden-->
 								<img src="img/san_francisco.png" class="img-responsive" style=" width:100%">
@@ -392,7 +306,119 @@
 						</div>
 					</div>
 				</div>
-		</div>
+			</div>
+		</section>
+
+		<!-- ********************************************************************************************************
+		********* DESIGN PROJECTS ANGULAR
+		****************************************************************************************************** -->
+
+		<!---Design Section-->
+		<section class="des" style="display:none">
+			<div class="row desc-header">
+				<!--DESIGN HEADER AREA!-->
+				<h1 class="text-center">DESIGN</h1>
+				<p class="text-center">I usually do alot of my own design work especially for all my personal projects. They range from prototyping wireframes to designing mockups to creating graphic icons. I love the design process just as much as my development process. Usual go to tools are almost always Photoshop or Illustrator or sometimes just pencil and paper. Click below to expand some of these designs.<br/><br/></p>
+			</div>
+
+
+		
+			<div class="row">
+				<!-- <div style="width:800px; margin:0 auto"> -->
+				<!--Column for GDI FLAT ICONS-->
+				<div class="col-md-4 text-center des-column"> <!--10px;margin:20px 50px 0 50px;-->
+					<div class="inner">
+						<a href="#" data-toggle="modal" data-target="#flaticonsModal">
+						<div class="des-hov"> <!--style="width:100%;"-->
+							<img src="img/all-icons.png" class="img-responsive"> <!--style="padding:15px"-->
+						</div>
+						</a>
+						<div class="img-caption">
+					  		<h4 class="text-center">Flat Icons</h4> 
+					 	 	<p>Girl Develop It Icons</p> 
+						</div>
+					</div>					
+				</div> <!--END of GDI FLAT ICONS COLUMN-->
+			
+				<!--HYBRID POINT LOGO COLUMN-->
+			  	<div class="col-md-4 text-center des-column"> <!--margin: 20px 20px 0 20px;-->
+			  		<div class="inner">
+				  		<a href="#" data-toggle="modal" data-target="#hybridlogo">
+			  			<div class="des-hov"> <!--style="width:100%;height:200px;"-->
+							<img src="img/Hybrid.png" class="img-responsive"> <!--style="padding:20px; margin:0 auto; height:100%;"-->
+						</div>
+						</a>				
+						<div class="img-caption">
+					  		<h4 class="text-center">Hybrid Point Logo</h4> 
+					 	 	<p>Graphic Logo Design</p> 
+						</div>
+					</div>
+				</div> <!--END of HYBRID POINT LOGO COLUMN-->
+
+			  	<!--COLUMN for HYBRID POINT UI MODAL -->
+				<div class="col-md-4 text-center des-column"> <!--margin:20px 50px 0 50px;-->
+					<div class="inner">
+						<a href="#" data-toggle="modal" data-target="#hybridpointModal">
+							<div class="des-hov"> <!--height:200px; overflow-y:hidden-->
+								<img src="img/psap-crop.png" class="img-responsive">
+							</div>
+						</a>
+						<div class="img-caption">
+					  		<h4 class="text-center">Hybrid Point UI</h4> 
+					 	 	<p>UX/UI Design Mockup <!-- built using Adobe Photoshop/Illustrator --></p> 
+						</div>
+					</div>
+				</div> <!--END of HYBRID POINT UI COLUMN-->
+				<!-- 	</div> -->
+			</div>
+			
+			<!--COLUMN for SAN FraNCISCO Art--> 
+			<div class="row" style="display:none">
+				<div class="col-md-5 text-center des-column">
+					<div class="inner">
+						<a href="#" data-toggle="modal" data-target="#sfmodal">
+							<div class="des-hov"style="background-color:white;"> <!--height:200px; overflow-y:hidden-->
+								<img src="img/san_francisco.png" class="img-responsive" style=" width:100%">
+							</div>
+						</a>
+
+						<div class="img-caption" style="">
+					  		<h4 class="text-center">Hybrid Point UI</h4> 
+					 	 	<p style="font-size:17px; margin-top:17px;">UX/UI Design Mockup <!-- built using Adobe Photoshop/Illustrator --></p> 
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+<!-- ********************************************************************************************************
+		********* DESIGN PROJECTS ANGULAR COPY @ - - -  THIS
+		****************************************************************************************************** -->
+
+		<!---Design Section-->
+		<section class="des">
+			<div class="row desc-header">
+				<!--DESIGN HEADER AREA!-->
+				<h1 class="text-center">DESIGN</h1>
+				<p class="text-center">I usually do alot of my own design work especially for all my personal projects. They range from prototyping wireframes to designing mockups to creating graphic icons. I love the design process just as much as my development process. Usual go to tools are almost always Photoshop or Illustrator or sometimes just pencil and paper. Click below to expand some of these designs.<br/><br/></p>
+			</div>
+
+			<div class="row">
+				<!--Column for GDI FLAT ICONS-->
+				<div class="col-md-4 text-center des-column {{designs.imgClass}}" ng-repeat="designs in design">
+					<div class="inner">
+						<a href="#" data-toggle="modal" data-target="{{designs.modalTarget}}">
+						<div class="des-hov">
+							<img ng-src="{{designs.image}}" class="img-responsive">
+						</div>
+						</a>
+						<div class="img-caption">
+					  		<h4 class="text-center">{{designs.title}}</h4> 
+					 	 	<p>{{designs.description}}</p> 
+						</div>
+					</div>					
+				</div> <!--END of GDI FLAT ICONS COLUMN-->
+			</div>
 		</section>
 
 
@@ -475,49 +501,34 @@
 	</div> <!--END OF GDI FLAT ICONS MODAL -->
 
 	
-
-
 	<!-- HYBRID POINT LOGO MODAL -->
-	<div class="modal fade design-modal" id="hybridlogo" role="dialog">
-	
+	<div class="modal fade design-modal" id="hybridlogo" role="dialog">	
 	  <div class="modal-content">
-	    <div class="modal-header">
-	      <button type="button" class="close" data-dismiss="modal">&times;</button>
-	      <h1 class="modal-title text-center">Hybrid Point Logo</h1>
-	    </div>
-
-	    <div class="container">
-	  		<div class="row">
-	  			<div class="col-lg-4 col-lg-offset-4">
-
-			        <div class="modal-body text-center" style="padding-top:50px">
-			          
-			           <img src="img/Hybrid.png" style="" class="img-responsive"> 
-			          
-
-			        </div>
-			    </div>
-
-	    	</div>
-	    	<div class="row desc" style="padding:40px auto">
-	    		<div class="col-lg-10 col-lg-offset-1" style="padding:20px">
-	    			<h3 class="text-center">Graphic Logo Design</h3>
-			        <p>Logo Design for Hybrid Point Technology, for hybrid location solutions. Design based on previous projects</p>
-			        <p><b><i> Tools: Adobe Illustrator/Photoshop</i></b></p> 
-
-	    		</div>
-	    	</div>
-	    </div>
-		<div class="modal-footer">
-	      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-	    </div>
-
-
+		    <div class="modal-header">
+		      <button type="button" class="close" data-dismiss="modal">&times;</button>
+		      <h1 class="modal-title text-center">Hybrid Point Logo</h1>
+		    </div>
+		    <div class="container">
+		  		<div class="row">
+		  			<div class="col-lg-4 col-lg-offset-4">
+				        <div class="modal-body text-center" style="padding-top:50px">			          
+				           <img src="img/Hybrid.png" style="" class="img-responsive"> 			          
+				        </div>
+				    </div>
+		    	</div>
+		    	<div class="row desc" style="padding:40px auto">
+		    		<div class="col-lg-10 col-lg-offset-1" style="padding:20px">
+		    			<h3 class="text-center">Graphic Logo Design</h3>
+				        <p>Logo Design for Hybrid Point Technology, for hybrid location solutions. Design based on previous projects</p>
+				        <p><b><i> Tools: Adobe Illustrator/Photoshop</i></b></p> 
+		    		</div>
+		    	</div>
+		    </div>
+			<div class="modal-footer">
+		      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		    </div>
 	  </div>
 	</div> <!--END OF HYBRID POINT LOGO MODAL -->
-
-
-
 
 	<!-- HYBRID POINT UI MODAL -->
 	<div class="modal fade design-modal" id="hybridpointModal" role="dialog">
@@ -552,7 +563,7 @@
 	  	</div>
 	</div> <!--END OF HYBRID UI POINT MODAL -->
 
-		<!-- HYBRID POINT UI MODAL -->
+	<!-- HYBRID POINT UI MODAL -->
 	<div class="modal fade design-modal" id="sfmodal" role="dialog">
 	  	<div class="modal-content">
 	      	<div class="container">
@@ -650,7 +661,7 @@
             <div class="row" style="padding-top:30px;">
                 <div class="col-lg-7 text-left" style="padding-left:30px" >
                     <p>&copy; Anusuya Choudhury 2015. All Rights Resereved</p>
-                    <p style="font-size: 15px;">This website has been built from ground up using the Bootstrap framework. Fonts have been provided by Google's Font API and icons by Font Awesome. Last some jQuery magic has been added to the recipe.</p>
+                    <p style="font-size: 15px;">This website has been built from ground up with the help of Angular and Bootstrap. Fonts have been provided by Google's Font API and icons by Font Awesome. Last some jQuery magic has been added to the recipe. My codebase for this website can be found <a href="https://github.com/arc6789/arc6789.github.io">here.</a></p>
                    <!--  <p style="font-size:13px">Note* This website is still under construction. Bug fixes and all...</p> -->
                   
 				</div>
@@ -668,8 +679,9 @@
 <script type="text/javascript" src="js/meetup-map.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
-
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.js"></script>
+<script src="js/app.js"></script>
+<script src="js/controllers/MainController.js"></script>
 <script type="text/javascript">
 	 $(document).ready(function () {
         $(".navbar-nav li.trigger-collapse a").click(function(event) {
