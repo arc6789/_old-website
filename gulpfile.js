@@ -20,9 +20,9 @@ gulp.task('styles', function(){
 });
 
 gulp.task('autoprefixer', function(){
-	gulp.src(['css/buttons.css'])
+	gulp.src(['css/style.scss'])
 		.pipe(autoprefixer('last 2 versions'))
-        .pipe(gulp.dest('css/buttonsnew.css'));
+    .pipe(gulp.dest('css'));
 
 });
 
@@ -66,5 +66,5 @@ process.stdout.write("hello: ");
 
 /* Default function Will run when issueing default gulp command*/
 //gulp.task('default',['defaultfunct']);
-gulp.task('sass-and-watch', ['sass','sass:watch']);
+gulp.task('sass-and-watch', ['sass', 'sass:watch']);
 gulp.task('browserprefix', ['autoprefixer']);
