@@ -1,0 +1,210 @@
+@import url(https://fonts.googleapis.com/css?family=Muli|Roboto|Capriola|Biryani|Indie+Flower|Handlee);
+@import "normalize.scss";
+// @import "variables.scss";
+
+body, .concrete-bg {
+  background: url("../img/concrete_seamless/concrete.png") repeat center fixed;
+  background-size: initial;
+  margin: 0; }
+
+/*initial no-repeat. repeat for moz*/
+p {
+  font-family: "adobe-garamond-pro","Adobe Garamond Pro","Georgia",serif;
+  line-height: 1.333em;
+  font-size: 150%; }
+
+.fa {
+  padding-left: 10px; }
+
+.nav-name { 
+  color:white; 
+  opacity:2; 
+  float:left
+}
+
+.des {
+  margin-top: 120px; }
+
+.des-hov {
+  -webkit-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+  background-color: #F5F5F5; }
+
+.des-hov:hover {
+  opacity: 0.1;
+  background: #414247;
+  box-shadow: 10px 10px 50px 20px black inset; }
+
+a {
+  text-decoration: none; }
+
+.row-dev {
+  margin-top: 70px;
+  color: #3D0158;
+  letter-spacing: 1px; }
+
+.desc-header p {
+  margin-top: 35px;
+  color: #3D0158;
+  letter-spacing: 1px; }
+
+.navbar, header {
+  margin: 0;
+  border: 0;
+  border-radius: 0; }
+
+.navbar-default {
+  opacity: 0.9;
+  background-color: #414247; }
+
+.design, .jumbotron {
+  box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15), 0px 2px 3px 0px rgba(0, 0, 0, 0.1); }
+
+.nav a {
+  font-family: 'Muli', sans-serif; }
+
+h1, h2, h3, h4 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold; }
+
+.dev h1 {
+  width: 267px;
+  margin: 0 auto;
+  border-top: 5px solid #4b4b4b;
+  padding-top: 10px;
+  letter-spacing: 1px; }
+
+.des h1 {
+  width: 135px;
+  margin: 0 auto;
+  border-top: 5px solid #4b4b4b;
+  padding-top: 10px;
+  letter-spacing: 1px; }
+
+.gdi-flaticons-class{
+  .des-hov{width:100%}
+  img{padding:15px}
+}
+.hybrid-logo-class {
+  .des-hov{width:100%;height:200px;}
+  img{padding:20px; margin:0 auto; height:100%;}
+}
+
+.hybridpoint-ui-class{
+  .des-hov{height:200px; overflow-y:hidden;height:100%}
+  img{width: 100%;}
+}
+
+
+
+.modal {
+  padding-left: 0;
+  margin-left: 0; }
+
+.meetup-git a i:hover {
+  color: #d33036; }
+
+.tumblr-git a i:hover {
+  color: #d8247e; }
+
+.footer-contact a i:hover {
+  color: #6135ad; }
+
+#map {
+  position: relative;
+  margin: 0 0 0 0;
+  width: 75%;
+  height: 500px;
+  float: left;
+  background-color: #E8E8E8;
+  border-left: 2px solid black;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black; }
+
+
+body {
+  padding-right: 0 !important; }
+
+.modal {
+  padding-left: 0px !important; }
+
+.des-column {
+  padding: 15px; 
+  .inner{
+    padding: 5px;
+    background-color: white; 
+  }
+}
+
+
+.img-caption p {
+  font-size: 17px;
+  margin-top: 17px; }
+
+ #jumb{-webkit-animation: anim-name 1s;animation: anim-name 1s }
+// #myrole{-webkit-animation:anim-role 2s ease-in;animation:anim-role 2s ease-in; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards;}
+.home-body{margin:50px;
+  -webkit-animation-name: movesup;
+          animation-name: movesup; 
+  -webkit-animation-duration:1.5s; 
+          animation-duration:1.5s; 
+  -webkit-animation-delay:0s ; 
+          animation-delay:0s ;
+  -webkit-animation-fill-mode:backwards;
+          animation-fill-mode:backwards
+}
+
+@-webkit-keyframes anim-name{ 
+  
+  0%{font-size: 0px; -webkit-transform:scale(0); transform:scale(0) }
+  100%{font-size:63px; -webkit-transform:scale(1); transform:scale(1)}
+
+}
+
+@keyframes anim-name{ 
+  
+  0%{font-size: 0px; -webkit-transform:scale(0); transform:scale(0) }
+  100%{font-size:63px; -webkit-transform:scale(1); transform:scale(1)}
+
+}
+
+@-webkit-keyframes anim-role{
+  0%{text-align:left}
+  100%{text-align:center}
+}
+
+@keyframes anim-role{
+  0%{text-align:left}
+  100%{text-align:center}
+}
+
+@-webkit-keyframes movesup{
+  0%{-webkit-transform:translateY(1000px);transform:translateY(1000px)}
+  100%{-webkit-transform:translateY(0px);transform:translateY(0px)}
+}
+
+@keyframes movesup{
+  0%,70%{-webkit-transform:translateY(1000px);transform:translateY(250px); opacity:0}
+  100%{-webkit-transform:translateY(0px);transform:translateY(0px); opacity:1}
+}
+
+
+/*400px*/
+@media (max-width: 800px) {
+  p {
+    font-size: 16px !important; }
+  .home-body {
+    margin: 20px !important; }
+  footer p {
+    font-size: 14px !important; }
+  header h1 {
+    font-size: 50px !important; }
+  header p {
+    font-size: 18px !important; }
+  .title h3, .title i {
+    font-size: 22px !important; }
+  #therapywebsite .modal-body {
+    padding: 10px !important; } }
+
+
+
