@@ -20,7 +20,7 @@ gulp.task('styles', function(){
 });
 
 gulp.task('autoprefixer', function(){
-	gulp.src(['css/style.scss'])
+	gulp.src(['sass/*.scss'])
 		.pipe(autoprefixer('last 2 versions'))
     .pipe(gulp.dest('css'));
 
@@ -51,13 +51,14 @@ gulp.task('watch', function(){
 'use strict';
  
 gulp.task('sass', function () {
-  gulp.src('css/style.scss')
-    .pipe(sass.sync().on('error', sass.logError))
-    .pipe(gulp.dest('css'));
+  gulp.src('sass/*.scss',{ sourcemap:true, style:'minified'})
+   //.pipe(sourcemaps.write())
+   .pipe(sass.sync().on('error', sass.logError))
+   .pipe(gulp.dest('css'));
 });
  
 gulp.task('sass:watch', function () {
-  gulp.watch('css/style.scss', ['sass']);
+  gulp.watch('sass/*.scss', ['sass']);
 });
 
 /*gulp.task('defaultfunct', function(){

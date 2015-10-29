@@ -1,7 +1,13 @@
-$black = black;
-$light-grey = #A5A5A5;
-$purple = #7f60b2; 
 
-$footer-bg = $black;
-$footer-font = $light-grey;
-$footer-git = $purple;
+/****** COLOR PALETTE *******/
+
+$black:		 	black;
+$light-grey: 	#A5A5A5;
+$purple: 	 	#7f60b2; 
+
+/******** DEFINED VARIABLES ********/
+
+$footer-bg:		$black;
+$footer-font: 	$light-grey;
+$footer-icons: 	$purple;
+
