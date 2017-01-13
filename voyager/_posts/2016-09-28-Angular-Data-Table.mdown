@@ -1,0 +1,15 @@
+---
+bg: "angular-data-table.png"
+layout: post
+title:  "Angular Data Table"
+crawlertitle: "Tumblr Theme Design"
+summary: "This data table is developed using Angular and uses Node to run a local server. Data for each column can be sorted in ascending or descending order. This project was given to me as an interview challenge, however I love the idea of having a data table that I can build upon to use for future data analytics projects. E2E/Functional tests are to be added soon. The UI is responsive and uses Sass for styling. Due to the API fetching a JSON response, data is slow to load. I have added an animation delay on each section for a smoother content load"
+date: 2016-09-28 23:09:47 +0700
+categories: posts
+tags: 'jekyll'
+author: Anusuya Choudhury
+link: http://quiet-earth-48469.herokuapp.com/
+code: https://github.com/arc6789/js-data-table
+roles: Design, Development
+tools: AngularJS, SASS(.scss), Node/npm, GULP, Bower 
+---

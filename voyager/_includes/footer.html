@@ -1,6 +1,16 @@
-<footer class="blog-footer content-wrapper">
-  <p>&copy; <span class="full-year"></span> {{ site.title }}. All Rights Reserved</p>
+<footer class="blog-footer content-wrapper row">
+<div class="col-lg-8">
+  <p class="text-left">&copy; <span class="full-year"></span> {{ site.title }}. All Rights Reserved</p>
+  <p class="text-left">Website built on Jekyll. Code can be found <a href="https://github.com/arc6789/arc6789.github.io" style="text-decoration: underline">here</a></p>
+</div>
+<div class="col-lg-4 social-link">
+	<i class="fa fa-github-alt" aria-hidden="true"></i><a href="https://github.com/arc6789" target="_blank">GitHub</a>
+	<i class="fa fa-linkedin" aria-hidden="true"></i><a href="https://www.linkedin.com/in/anusuyaroychoudhury" target="_blank">LinkedIn</a>
+	<i class="fa fa-twitter" aria-hidden="true"></i><a href="https://twitter.com/arc6789" target="_blank">Twitter</a>
+</div>
 </footer>
 <script src="{{ site.baseurl }}/assets/js/scripts.js"></script>
+<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.js'></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="{{ site.baseurl }}/assets/js/meetup-map.js"></script>

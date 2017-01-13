@@ -16,10 +16,11 @@ body {
   font: normal 17px/1.5 'PT Serif', "Helvetica Neue", "Helvetica", Arial, sans-serif;
   width: 100%;
   height: 100%;
-  background: #fdfdfd;
   color: #222;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
+  background: url(../images/concrete.png) repeat center fixed;
+  background-size: initial;
 }
 
 article p {

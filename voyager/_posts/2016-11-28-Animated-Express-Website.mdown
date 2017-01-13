@@ -1,0 +1,14 @@
+---
+bg: "animated-website.png"
+layout: post
+title:  "Animated Express Website"
+summary: "Shubhra has a very multifaceted personality. She wanted a website that captured all parts of her life and gave the viewer an immersive experience. This website is a work in progress and includes animations. It is built on Node.js using the Express framework as well as Handlebars for a templating engine. For design it uses Sass with Compass. Grunt/Gulp both are used as build tools and the website is curently deployed on Heroku. Landing and About pages are available for view"
+date: 2016-11-28 23:09:47 +0700
+categories: posts
+tags: 'jekyll'
+author: Anusuya Choudhury
+link: https://blooming-gorge-66083.herokuapp.com/
+code: https://github.com/arc6789/animated-express-handlebars
+roles: Design, Development
+tools: Node.js, Express framework, Handlebars, Sass with Compass, Grunt and Gulp (for build), Heroku (for deployment)
+---

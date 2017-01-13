@@ -1,8 +1,8 @@
 ---
-layout: page
-title: "Design"
+title: "Random"
 crawlertitle: "Why and how this blog was created"
-permalink: /design/
+permalink: /random/
 summary: "About this blog"
-active: design
+active: random
+published: false
 ---

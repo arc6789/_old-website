@@ -1,4 +1,5 @@
 ---
+bg: "owl.jpg"
 layout: post
 title:  "Welcome to Jekyll!"
 crawlertitle: "How to use jekyll"

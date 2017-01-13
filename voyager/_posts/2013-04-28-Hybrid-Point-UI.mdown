@@ -1,0 +1,13 @@
+---
+bg: "hybridmap.png"
+layout: post
+title:  "Hybrid Point UI"
+crawlertitle: "Locate your Meetup"
+summary: "This UI was inspired by some of the projects I had worked on during a previous internship at a company that makes software for location and tracking. Hybrid Point Map is a web application that is a work in progress using Google Maps API."
+date: 2013-04-28 23:09:47 +0700
+categories: posts
+tags: 'jekyll'
+author: Anusuya Choudhury
+roles: Design and Development
+tools: Google Maps API
+---
